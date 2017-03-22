@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <ReactiveCocoa/ReactiveCocoa.h>
 @interface ViewController ()
 
 @end
@@ -16,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    RACSignal *singal = [RACSignal createSignal:^RACDisposable *(id subscriber) {
+        [subscriber sendNext:@"暮落晨曦"];
+        return nil;
+    }];
+    [singal subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
 }
 
 
