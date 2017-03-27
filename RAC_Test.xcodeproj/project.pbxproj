@@ -10,6 +10,7 @@
 		11350291D24A71848086149B /* Pods_RAC_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62EF0D3A7E9414FA6B0DFB2 /* Pods_RAC_Test.framework */; };
 		16A4EF2D1F6073EFA8E1EEA6 /* Pods_RAC_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69449DAD6BE869988F3B7996 /* Pods_RAC_TestTests.framework */; };
 		36C19671E514E1162714E151 /* Pods_RAC_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E7C81EBC1633D2901EBC3B /* Pods_RAC_TestUITests.framework */; };
+		E52543711E83B86300EE244C /* firstViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E52543701E83B86300EE244C /* firstViewModel.m */; };
 		E56E71A21E713964006D0D25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E71A11E713964006D0D25 /* main.m */; };
 		E56E71A51E713964006D0D25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E71A41E713964006D0D25 /* AppDelegate.m */; };
 		E56E71A81E713964006D0D25 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E71A71E713964006D0D25 /* ViewController.m */; };
@@ -22,6 +23,7 @@
 		E5D177F51E827A3F0091D812 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D177F31E827A3F0091D812 /* person.png */; };
 		E5D177F81E82900A0091D812 /* newGuide1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D177F71E82900A0091D812 /* newGuide1-1.png */; };
 		E5D177FA1E8291780091D812 /* 56logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D177F91E8291780091D812 /* 56logo.png */; };
+		E5D177FE1E83A68D0091D812 /* RACNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D177FD1E83A68D0091D812 /* RACNetWorkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		8D0ABA6D486B3F5949A49728 /* Pods-RAC_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC_Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-RAC_Test/Pods-RAC_Test.release.xcconfig"; sourceTree = "<group>"; };
 		8FD10F5F46414CD850644EC7 /* Pods-RAC_TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC_TestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RAC_TestTests/Pods-RAC_TestTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD31EFC2603413D9AA5A1384 /* Pods-RAC_TestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC_TestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RAC_TestUITests/Pods-RAC_TestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E525436F1E83B86300EE244C /* firstViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstViewModel.h; sourceTree = "<group>"; };
+		E52543701E83B86300EE244C /* firstViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstViewModel.m; sourceTree = "<group>"; };
 		E56E719D1E713964006D0D25 /* RAC_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAC_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56E71A11E713964006D0D25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E56E71A31E713964006D0D25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 		E5D177F61E8283F30091D812 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5D177F71E82900A0091D812 /* newGuide1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newGuide1-1.png"; sourceTree = "<group>"; };
 		E5D177F91E8291780091D812 /* 56logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 56logo.png; sourceTree = "<group>"; };
+		E5D177FC1E83A68D0091D812 /* RACNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACNetWorkManager.h; sourceTree = "<group>"; };
+		E5D177FD1E83A68D0091D812 /* RACNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACNetWorkManager.m; sourceTree = "<group>"; };
 		EFD79FE02FB214F2AD74BB7F /* Pods-RAC_TestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC_TestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RAC_TestUITests/Pods-RAC_TestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F62EF0D3A7E9414FA6B0DFB2 /* Pods_RAC_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RAC_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +132,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E525436E1E83B84800EE244C /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				E525436F1E83B86300EE244C /* firstViewModel.h */,
+				E52543701E83B86300EE244C /* firstViewModel.m */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
 		E56E71941E713964006D0D25 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +175,8 @@
 				E56E71AC1E713964006D0D25 /* Assets.xcassets */,
 				E56E71AE1E713964006D0D25 /* LaunchScreen.storyboard */,
 				E56E71B11E713964006D0D25 /* Info.plist */,
+				E525436E1E83B84800EE244C /* Class */,
+				E5D177FB1E83A63D0091D812 /* NetWork */,
 				E56E71A01E713964006D0D25 /* Supporting Files */,
 				E5D177E81E8272B10091D812 /* RAC_Test-prefix.pch */,
 				E5D177E91E8275CE0091D812 /* GloableDefine.h */,
@@ -210,6 +227,15 @@
 				E5D177F31E827A3F0091D812 /* person.png */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		E5D177FB1E83A63D0091D812 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				E5D177FC1E83A68D0091D812 /* RACNetWorkManager.h */,
+				E5D177FD1E83A68D0091D812 /* RACNetWorkManager.m */,
+			);
+			path = NetWork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,8 +523,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E56E71A81E713964006D0D25 /* ViewController.m in Sources */,
+				E5D177FE1E83A68D0091D812 /* RACNetWorkManager.m in Sources */,
 				E56E71A51E713964006D0D25 /* AppDelegate.m in Sources */,
 				E56E71A21E713964006D0D25 /* main.m in Sources */,
+				E52543711E83B86300EE244C /* firstViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

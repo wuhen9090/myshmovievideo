@@ -13,6 +13,7 @@ target 'RAC_Test' do
   pod 'AFNetworking', '~> 3.0.4'
   pod 'TMCache', '~> 2.1.0'
   pod 'JSONModel', '~> 1.2.0'
+  pod 'YYKit',    '~> 1.0.7'
   use_frameworks!
 
   # Pods for RAC_Test
