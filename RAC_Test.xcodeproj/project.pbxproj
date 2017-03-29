@@ -10,6 +10,15 @@
 		11350291D24A71848086149B /* Pods_RAC_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62EF0D3A7E9414FA6B0DFB2 /* Pods_RAC_Test.framework */; };
 		16A4EF2D1F6073EFA8E1EEA6 /* Pods_RAC_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69449DAD6BE869988F3B7996 /* Pods_RAC_TestTests.framework */; };
 		36C19671E514E1162714E151 /* Pods_RAC_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E7C81EBC1633D2901EBC3B /* Pods_RAC_TestUITests.framework */; };
+		E51500131E8A6159001F0DEA /* BarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E515000E1E8A6159001F0DEA /* BarItem.m */; };
+		E51500141E8A6159001F0DEA /* CBStoreHouseRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E51500101E8A6159001F0DEA /* CBStoreHouseRefreshControl.m */; };
+		E51500151E8A6159001F0DEA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E51500111E8A6159001F0DEA /* LICENSE */; };
+		E51500161E8A6159001F0DEA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E51500121E8A6159001F0DEA /* README.md */; };
+		E51500181E8A6247001F0DEA /* headViewForTableView.plist in Resources */ = {isa = PBXBuildFile; fileRef = E51500171E8A6247001F0DEA /* headViewForTableView.plist */; };
+		E515001A1E8A6598001F0DEA /* Canvas 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E51500191E8A6598001F0DEA /* Canvas 1.png */; };
+		E515001D1E8A6A44001F0DEA /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E515001C1E8A6A44001F0DEA /* MyTableViewCell.m */; };
+		E515001F1E8A6EF9001F0DEA /* AKTA.plist in Resources */ = {isa = PBXBuildFile; fileRef = E515001E1E8A6EF9001F0DEA /* AKTA.plist */; };
+		E51500211E8A7D6A001F0DEA /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = E51500201E8A7D6A001F0DEA /* storehouse.plist */; };
 		E52543711E83B86300EE244C /* firstViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E52543701E83B86300EE244C /* firstViewModel.m */; };
 		E56E71A21E713964006D0D25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E71A11E713964006D0D25 /* main.m */; };
 		E56E71A51E713964006D0D25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E71A41E713964006D0D25 /* AppDelegate.m */; };
@@ -51,6 +60,18 @@
 		8D0ABA6D486B3F5949A49728 /* Pods-RAC_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC_Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-RAC_Test/Pods-RAC_Test.release.xcconfig"; sourceTree = "<group>"; };
 		8FD10F5F46414CD850644EC7 /* Pods-RAC_TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC_TestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RAC_TestTests/Pods-RAC_TestTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD31EFC2603413D9AA5A1384 /* Pods-RAC_TestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC_TestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RAC_TestUITests/Pods-RAC_TestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E515000D1E8A6159001F0DEA /* BarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarItem.h; sourceTree = "<group>"; };
+		E515000E1E8A6159001F0DEA /* BarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarItem.m; sourceTree = "<group>"; };
+		E515000F1E8A6159001F0DEA /* CBStoreHouseRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBStoreHouseRefreshControl.h; sourceTree = "<group>"; };
+		E51500101E8A6159001F0DEA /* CBStoreHouseRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBStoreHouseRefreshControl.m; sourceTree = "<group>"; };
+		E51500111E8A6159001F0DEA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E51500121E8A6159001F0DEA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E51500171E8A6247001F0DEA /* headViewForTableView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = headViewForTableView.plist; sourceTree = "<group>"; };
+		E51500191E8A6598001F0DEA /* Canvas 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Canvas 1.png"; sourceTree = "<group>"; };
+		E515001B1E8A6A44001F0DEA /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		E515001C1E8A6A44001F0DEA /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		E515001E1E8A6EF9001F0DEA /* AKTA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AKTA.plist; sourceTree = "<group>"; };
+		E51500201E8A7D6A001F0DEA /* storehouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = storehouse.plist; sourceTree = "<group>"; };
 		E525436F1E83B86300EE244C /* firstViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstViewModel.h; sourceTree = "<group>"; };
 		E52543701E83B86300EE244C /* firstViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstViewModel.m; sourceTree = "<group>"; };
 		E56E719D1E713964006D0D25 /* RAC_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAC_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,11 +153,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E515000B1E8A6159001F0DEA /* CBStoreHouseRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				E515000C1E8A6159001F0DEA /* Class */,
+				E51500111E8A6159001F0DEA /* LICENSE */,
+				E51500121E8A6159001F0DEA /* README.md */,
+			);
+			path = CBStoreHouseRefreshControl;
+			sourceTree = "<group>";
+		};
+		E515000C1E8A6159001F0DEA /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				E515000D1E8A6159001F0DEA /* BarItem.h */,
+				E515000E1E8A6159001F0DEA /* BarItem.m */,
+				E515000F1E8A6159001F0DEA /* CBStoreHouseRefreshControl.h */,
+				E51500101E8A6159001F0DEA /* CBStoreHouseRefreshControl.m */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
 		E525436E1E83B84800EE244C /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				E515000B1E8A6159001F0DEA /* CBStoreHouseRefreshControl */,
 				E525436F1E83B86300EE244C /* firstViewModel.h */,
 				E52543701E83B86300EE244C /* firstViewModel.m */,
+				E515001B1E8A6A44001F0DEA /* MyTableViewCell.h */,
+				E515001C1E8A6A44001F0DEA /* MyTableViewCell.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -214,6 +259,8 @@
 			isa = PBXGroup;
 			children = (
 				E5D177F11E827A3F0091D812 /* image */,
+				E51500171E8A6247001F0DEA /* headViewForTableView.plist */,
+				E51500201E8A7D6A001F0DEA /* storehouse.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -221,10 +268,12 @@
 		E5D177F11E827A3F0091D812 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				E51500191E8A6598001F0DEA /* Canvas 1.png */,
 				E5D177F91E8291780091D812 /* 56logo.png */,
 				E5D177F71E82900A0091D812 /* newGuide1-1.png */,
 				E5D177F21E827A3F0091D812 /* man.jpg */,
 				E5D177F31E827A3F0091D812 /* person.png */,
+				E515001E1E8A6EF9001F0DEA /* AKTA.plist */,
 			);
 			path = image;
 			sourceTree = "<group>";
@@ -353,9 +402,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51500151E8A6159001F0DEA /* LICENSE in Resources */,
+				E51500211E8A7D6A001F0DEA /* storehouse.plist in Resources */,
 				E56E71B01E713964006D0D25 /* LaunchScreen.storyboard in Resources */,
 				E5D177F81E82900A0091D812 /* newGuide1-1.png in Resources */,
+				E51500181E8A6247001F0DEA /* headViewForTableView.plist in Resources */,
+				E515001A1E8A6598001F0DEA /* Canvas 1.png in Resources */,
 				E56E71AD1E713964006D0D25 /* Assets.xcassets in Resources */,
+				E515001F1E8A6EF9001F0DEA /* AKTA.plist in Resources */,
 				E56E71AB1E713964006D0D25 /* Main.storyboard in Resources */,
 				E5D177FA1E8291780091D812 /* 56logo.png in Resources */,
 			);
@@ -525,7 +579,11 @@
 				E56E71A81E713964006D0D25 /* ViewController.m in Sources */,
 				E5D177FE1E83A68D0091D812 /* RACNetWorkManager.m in Sources */,
 				E56E71A51E713964006D0D25 /* AppDelegate.m in Sources */,
+				E515001D1E8A6A44001F0DEA /* MyTableViewCell.m in Sources */,
 				E56E71A21E713964006D0D25 /* main.m in Sources */,
+				E51500141E8A6159001F0DEA /* CBStoreHouseRefreshControl.m in Sources */,
+				E51500131E8A6159001F0DEA /* BarItem.m in Sources */,
+				E51500161E8A6159001F0DEA /* README.md in Sources */,
 				E52543711E83B86300EE244C /* firstViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
