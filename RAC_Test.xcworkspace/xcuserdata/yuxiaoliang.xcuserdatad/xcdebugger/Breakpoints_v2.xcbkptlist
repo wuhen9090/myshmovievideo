@@ -33,38 +33,6 @@
             endingLineNumber = "46"
             landmarkName = "-requestSoureDataFromUrlUsingGET:paramData:successBlock:fialBlock:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[RACNetWorkManager requestSoureDataFromUrlUsingGET:paramData:successBlock:fialBlock:]"
-                  moduleName = "RAC_Test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/NetWork/RACNetWorkManager.m"
-                  timestampString = "512536753.812499"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "161">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__86-[RACNetWorkManager requestSoureDataFromUrlUsingGET:paramData:successBlock:fialBlock:]_block_invoke"
-                  moduleName = "RAC_Test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/NetWork/RACNetWorkManager.m"
-                  timestampString = "512536753.813588"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "52">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -191,38 +159,6 @@
             endingLineNumber = "33"
             landmarkName = "-bindViewModel"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController bindViewModel]"
-                  moduleName = "RAC_Test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/ViewController.m"
-                  timestampString = "512536753.831908"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "61">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__31-[ViewController bindViewModel]_block_invoke"
-                  moduleName = "RAC_Test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/ViewController.m"
-                  timestampString = "512536753.832982"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "51">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -238,22 +174,6 @@
             startingLineNumber = "109"
             endingLineNumber = "109"
             landmarkName = "-registerNavigationHooks"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RAC_Test/Class/view/BaseClass/MRCNavigationControllerStack.m"
-            timestampString = "512471911.291205"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "-initWithServices:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -360,11 +280,11 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Class/view/BaseClass/MRCTableViewController.m"
-                  timestampString = "512536753.853702"
+                  timestampString = "512558519.309041"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "148"
-                  endingLineNumber = "148"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
                   offsetFromSymbolStart = "535">
                </Location>
                <Location
@@ -375,11 +295,11 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Class/view/BaseClass/MRCTableViewController.m"
-                  timestampString = "512536753.855016"
+                  timestampString = "512558519.310139"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "149"
-                  endingLineNumber = "149"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
                   offsetFromSymbolStart = "44">
                </Location>
             </Locations>
@@ -504,7 +424,7 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Gloable/MRCRouter.m"
-                  timestampString = "512536753.868635"
+                  timestampString = "512558519.32401"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -519,7 +439,7 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Gloable/MRCRouter.m"
-                  timestampString = "512536753.869998"
+                  timestampString = "512558519.325119"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -568,7 +488,7 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Class/view/BaseClass/MRCTableViewController.m"
-                  timestampString = "512536753.874599"
+                  timestampString = "512558519.329284"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -583,7 +503,7 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Class/view/BaseClass/MRCTableViewController.m"
-                  timestampString = "512536753.875778"
+                  timestampString = "512558519.330358"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -598,7 +518,7 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Class/view/BaseClass/MRCTableViewController.m"
-                  timestampString = "512536753.876966"
+                  timestampString = "512558519.331441"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -727,11 +647,11 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Class/view/BaseClass/MRCTableViewController.m"
-                  timestampString = "512536753.892344"
+                  timestampString = "512558519.346561"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
                   offsetFromSymbolStart = "84">
                </Location>
                <Location
@@ -742,11 +662,11 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Class/view/BaseClass/MRCTableViewController.m"
-                  timestampString = "512536753.893409"
+                  timestampString = "512558519.347708"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
                   offsetFromSymbolStart = "88">
                </Location>
             </Locations>
@@ -766,38 +686,134 @@
             endingLineNumber = "37"
             landmarkName = "-bindViewModel"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RAC_Test/Class/viewModel/GPUimageViewModel.m"
+            timestampString = "512558518.146395"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "-initialize"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RAC_Test/Class/view/GPUImageViewController.m"
+            timestampString = "512558518.146395"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-bindViewModel"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController bindViewModel]"
+                  symbolName = "__39-[GPUImageViewController bindViewModel]_block_invoke.71"
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/ViewController.m"
-                  timestampString = "512536753.895951"
+                  urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Class/view/GPUImageViewController.m"
+                  timestampString = "512558519.352811"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "113">
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "94">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__31-[ViewController bindViewModel]_block_invoke_2"
+                  symbolName = "__39-[GPUImageViewController bindViewModel]_block_invoke_2.74"
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/ViewController.m"
-                  timestampString = "512536753.897181"
+                  urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Class/view/GPUImageViewController.m"
+                  timestampString = "512558519.353938"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "51">
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RAC_Test/Class/view/GPUImageViewController.m"
+            timestampString = "512558518.146395"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "-selcectVC"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RAC_Test/Class/view/GPUImageViewController.m"
+            timestampString = "512558518.146395"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "-selcectVC"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RAC_Test/Class/firstViewModel.m"
+            timestampString = "512558404.191407"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-setUpSingal"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RAC_Test/Class/viewModel/BaseClass/MRCViewModel.m"
+            timestampString = "512558439.53896"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-initWithServices:params:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

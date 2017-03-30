@@ -19,9 +19,6 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self initUI];
-
-
 }
 - (void)bindViewModel {
     [super bindViewModel];
@@ -32,27 +29,6 @@
     [singal subscribeNext:^(id x) {
         NSLog(@"%@", x);
     }];
-
-}
-- (void)initUI {
-//    self.tableView.backgroundColor = [UIColor redColor];
-//    [self.view addSubview:self.imageView];
-//    [self.view addSubview:self.testButton];
-//    [self.view addSubview:self.testTableView];
-//    self.refreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.testTableView
-//                                                                  target:self
-//                                                           refreshAction:@selector(refreshTriggered:)
-//                                                                   plist:@"headViewForTableView"
-//                                                                   color:[UIColor redColor]
-//                                                               lineWidth:2
-//                                                              dropHeight:80
-//                                                                   scale:1
-//                                                    horizontalRandomness:300
-//                                                 reverseLoadingAnimation:NO
-//                                                 internalAnimationFactor:1];
-    
-    //    self.refreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.testTableView target:self refreshAction:@selector(refreshTriggered:) plist:@"AKTA" color:[UIColor blueColor] lineWidth:2 dropHeight:80 scale:0.7 horizontalRandomness:300 reverseLoadingAnimation:NO internalAnimationFactor:0.7];
-//    [self updateViewConstraintsForView ];
 
 }
 
@@ -78,59 +54,6 @@
     return 40;
 }
 
-- (void)updateViewConstraintsForView {
-    @weakify(self);
-//    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        @strongify(self);
-//        make.top.equalTo(self.view.mas_top).offset(100);
-//        make.left.equalTo(self.view.mas_left).offset(50);
-//        make.size.mas_equalTo(self.imageView.image.size);
-//    }];
-//    [self.testButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//        @strongify(self);
-//        make.top.equalTo(self.imageView.mas_bottom).offset(100);
-//        make.left.equalTo(self.view.mas_left);
-//        make.size.mas_equalTo(CGSizeMake(100, 50));
-//    }];
-//    [self.testTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        @strongify(self);
-//        make.top.equalTo(self.view.mas_top).offset(-64);
-//        make.left.right.bottom.equalTo(self.view);
-//    }];
-
-}
-//
-//- (UIImageView *)imageView {
-//    if (!_imageView) {
-//        _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"56logo"]];
-//    }
-//    return _imageView;
-//}
-//- (UIButton *)testButton {
-//    if (!_testButton) {
-//        _testButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [_testButton setTitle:@"测试" forState:UIControlStateNormal];
-//        [_testButton setTintColor:[UIColor redColor]];
-//        [_testButton setBackgroundColor:[UIColor blueColor]];
-//    }
-//    return _testButton;
-//}
-//- (UITableView *)testTableView {
-//    if (!_testTableView) {
-//        _testTableView = [[UITableView alloc]initWithFrame:self.view.bounds];
-//        _testTableView.contentInset  = UIEdgeInsetsMake(64, 0, 0, 0);
-//        _testTableView.delegate = self;
-//        _testTableView.dataSource = self;
-//        [_testTableView registerClass:[MyTableViewCell class] forCellReuseIdentifier:@"cell"];
-//        _testTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//        _testTableView.alwaysBounceVertical = YES;
-//        self.edgesForExtendedLayout = UIRectEdgeNone;
-//        self.automaticallyAdjustsScrollViewInsets = NO;
-//
-//    }
-//    return _testTableView;
-//}
-//
 //#pragma mark - Notifying refresh control of scrolling
 //
 //- (void)scrollViewDidScroll:(UIScrollView *)scrollView

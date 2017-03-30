@@ -16,6 +16,7 @@
 
 @implementation RACViewController
 - (void)bindViewModel {
+    [super bindViewModel];
     //第一种方式
     //    [[self.testButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
     //

@@ -9,5 +9,5 @@
 #import "MRCViewModel.h"
 
 @interface GPUimageViewModel : MRCViewModel
-@property (nonatomic, strong) RACCommand *importImage ;
+@property (nonatomic, strong) RACCommand *importImageCommand ;
 @end
