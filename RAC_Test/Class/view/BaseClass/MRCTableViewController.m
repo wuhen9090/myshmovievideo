@@ -7,19 +7,16 @@
 //
 
 #import "MRCTableViewController.h"
-#import "MRCTableViewModel.h"
 #import "MyTableViewCell.h"
 //#import "MRCTableViewCellStyleValue1.h"
 //#import "YYFPSLabel.h"
 
 @interface MRCTableViewController ()
 
-@property (nonatomic, strong, readwrite) IBOutlet UISearchBar *searchBar;
-@property (nonatomic, weak, readwrite) IBOutlet UITableView *tableView;
+//@property (nonatomic, weak, readwrite) UITableView *tableView;
 
 //@property (nonatomic, strong) YYFPSLabel *fpsLabel;
 
-@property (nonatomic, strong, readonly) MRCTableViewModel *viewModel;
 @property (nonatomic, strong) CBStoreHouseRefreshControl *refreshControl;
 
 @end
@@ -35,17 +32,17 @@
             @weakify(self)
             [[self rac_signalForSelector:@selector(viewDidLoad)] subscribeNext:^(id x) {
                 @strongify(self)
-                [self.viewModel.requestRemoteDataCommand execute:@1];
+//                [self.viewModel.requestRemoteDataCommand execute:@1];
             }];
         }
     }
     return self;
 }
 
-- (void)setView:(UIView *)view {
-    [super setView:view];
-    if ([view isKindOfClass:UITableView.class]) self.tableView = (UITableView *)view;
-}
+//- (void)setView:(UIView *)view {
+//    [super setView:view];
+//    if ([view isKindOfClass:UITableView.class]) self.tableView = (UITableView *)view;
+//}
 
 - (UIEdgeInsets)contentInset {
     return UIEdgeInsetsMake(64, 0, 0, 0);
@@ -63,7 +60,7 @@
 //        self.searchBar.translatesAutoresizingMaskIntoConstraints = NO;
 //        
 //    }
-    
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.contentOffset = CGPointMake(0, CGRectGetHeight(self.searchBar.frame) - self.contentInset.top);
     self.tableView.contentInset  = self.contentInset;
     self.tableView.scrollIndicatorInsets = self.contentInset;
@@ -71,6 +68,11 @@
     self.tableView.sectionIndexColor = [UIColor darkGrayColor];
     self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     self.tableView.sectionIndexMinimumDisplayRowCount = 20;
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.view addSubview:self.tableView];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 //    [self.tableView registerClass:[MRCTableViewCellStyleValue1 class] forCellReuseIdentifier:@"MRCTableViewCellStyleValue1"];
@@ -150,13 +152,13 @@
             [self reloadData];
         }];
 
-    [self.viewModel.requestRemoteDataCommand.executing subscribeNext:^(NSNumber *executing) {
-        @strongify(self)
-        UIView *emptyDataSetView = [self.tableView.subviews.rac_sequence objectPassingTest:^(UIView *view) {
-            return [NSStringFromClass(view.class) isEqualToString:@"DZNEmptyDataSetView"];
-        }];
-        emptyDataSetView.alpha = 1.0 - executing.floatValue;
-    }];
+//    [self.viewModel.requestRemoteDataCommand.executing subscribeNext:^(NSNumber *executing) {
+//        @strongify(self)
+//        UIView *emptyDataSetView = [self.tableView.subviews.rac_sequence objectPassingTest:^(UIView *view) {
+//            return [NSStringFromClass(view.class) isEqualToString:@"DZNEmptyDataSetView"];
+//        }];
+//        emptyDataSetView.alpha = 1.0 - executing.floatValue;
+//    }];
 }
 
 - (void)reloadData {
@@ -184,7 +186,7 @@
     
     id object = self.viewModel.dataSource[indexPath.section][indexPath.row];
     [self configureCell:cell atIndexPath:indexPath withObject:(id)object];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     return cell;
 }
 

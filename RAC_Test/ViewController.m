@@ -24,7 +24,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initUI];
+//    [self initUI];
+
 
 }
 - (void)bindViewModel {
@@ -36,6 +37,7 @@
     [singal subscribeNext:^(id x) {
         NSLog(@"%@", x);
     }];
+
 //     @weakify(self);
 //    [RACObserve(self.viewModel, arrayData) subscribeNext:^(id x) {
 //        @strongify(self);
@@ -70,6 +72,7 @@
 
 }
 - (void)initUI {
+//    self.tableView.backgroundColor = [UIColor redColor];
 //    [self.view addSubview:self.imageView];
 //    [self.view addSubview:self.testButton];
 //    [self.view addSubview:self.testTableView];
@@ -86,7 +89,7 @@
 //                                                 internalAnimationFactor:1];
     
     //    self.refreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.testTableView target:self refreshAction:@selector(refreshTriggered:) plist:@"AKTA" color:[UIColor blueColor] lineWidth:2 dropHeight:80 scale:0.7 horizontalRandomness:300 reverseLoadingAnimation:NO internalAnimationFactor:0.7];
-    [self updateViewConstraintsForView ];
+//    [self updateViewConstraintsForView ];
 
 }
 

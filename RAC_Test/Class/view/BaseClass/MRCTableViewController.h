@@ -7,13 +7,15 @@
 //
 
 #import "MRCViewController.h"
-
+#import "MRCTableViewModel.h"
 @interface MRCTableViewController : MRCViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 /// The table view for tableView controller.
 @property (nonatomic, strong, readonly) UISearchBar *searchBar;
-@property (nonatomic, weak, readonly) UITableView *tableView;
+@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, assign, readonly) UIEdgeInsets contentInset;
+@property (nonatomic, strong) MRCTableViewModel *viewModel;
+
 
 - (void)reloadData;
 - (UITableViewCell *)tableView:(UITableView *)tableView dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath;
