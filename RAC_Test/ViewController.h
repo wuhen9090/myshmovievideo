@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
-
+#import "MRCTableViewController.h"
+@interface ViewController : MRCTableViewController
 
 @end
 

@@ -8,8 +8,12 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "MRCViewModelServicesImpl.h"
+#import "MRCNavigationControllerStack.h"
+#import "firstViewModel.h"
 @interface AppDelegate ()
-
+@property (nonatomic, strong) MRCViewModelServicesImpl *services;
+@property (nonatomic, strong) MRCNavigationControllerStack *navigationControllerStack;
 @end
 
 @implementation AppDelegate
@@ -17,18 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    UIViewController *rootVC = [[ViewController alloc] init];
-    UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:rootVC];
-
-    // 主页面
-    self.window.rootViewController = mainNav;
-    
-    
-    // keyWindow
-    [self.window makeKeyAndVisible];
-    self.window.backgroundColor = [UIColor whiteColor];
-    
+    [self setFirstRootViewController];
 
     return YES;
 }
@@ -60,5 +53,22 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)setFirstRootViewController {
+    self.services = [[MRCViewModelServicesImpl alloc] init];
+    self.navigationControllerStack = [[MRCNavigationControllerStack alloc] initWithServices:self.services];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.services resetRootViewModel:[self createInitialViewModel]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
 
+}
+- (MRCViewModel *)createInitialViewModel {
+    // The user has logged-in.
+//    if ([SSKeychain rawLogin].isExist && [SSKeychain accessToken].isExist) {
+//        return [[MRCHomepageViewModel alloc] initWithServices:self.services params:nil];
+//    } else {
+//        return [[MRCLoginViewModel alloc] initWithServices:self.services params:nil];
+//    }
+    return [[firstViewModel alloc] initWithServices:self.services params:nil];
+}
 @end

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MyTableViewCell : UITableViewCell
-
+- (void)bindViewModel:(NSString *)viewModel;
 @end

@@ -33,6 +33,26 @@
 		E5D177F81E82900A0091D812 /* newGuide1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D177F71E82900A0091D812 /* newGuide1-1.png */; };
 		E5D177FA1E8291780091D812 /* 56logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D177F91E8291780091D812 /* 56logo.png */; };
 		E5D177FE1E83A68D0091D812 /* RACNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D177FD1E83A68D0091D812 /* RACNetWorkManager.m */; };
+		E5F666771E8B65960007304B /* RACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666761E8B65960007304B /* RACViewController.m */; };
+		E5F6667A1E8B65CA0007304B /* RACViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666791E8B65CA0007304B /* RACViewModel.m */; };
+		E5F666A81E8B68A60007304B /* MRCSegmentedControlViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F6669C1E8B68A60007304B /* MRCSegmentedControlViewModel.m */; };
+		E5F666A91E8B68A60007304B /* MRCTabBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F6669E1E8B68A60007304B /* MRCTabBarViewModel.m */; };
+		E5F666AA1E8B68A60007304B /* MRCTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666A01E8B68A60007304B /* MRCTableViewModel.m */; };
+		E5F666AB1E8B68A60007304B /* MRCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666A21E8B68A60007304B /* MRCViewModel.m */; };
+		E5F666AC1E8B68A60007304B /* MRCViewModelServicesImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666A51E8B68A60007304B /* MRCViewModelServicesImpl.m */; };
+		E5F666AD1E8B68A60007304B /* MRCWebViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666A71E8B68A60007304B /* MRCWebViewModel.m */; };
+		E5F666B21E8B6B4A0007304B /* MRCRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666B11E8B6B4A0007304B /* MRCRouter.m */; };
+		E5F666B61E8B6C380007304B /* MRCViewControllerAnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666B51E8B6C380007304B /* MRCViewControllerAnimatedTransition.m */; };
+		E5F666CB1E8B8E980007304B /* MRCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666B91E8B8E970007304B /* MRCNavigationController.m */; };
+		E5F666CC1E8B8E980007304B /* MRCNavigationControllerStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666BB1E8B8E970007304B /* MRCNavigationControllerStack.m */; };
+		E5F666CD1E8B8E980007304B /* MRCSegmentedControlController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666BD1E8B8E970007304B /* MRCSegmentedControlController.m */; };
+		E5F666CE1E8B8E980007304B /* MRCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666BF1E8B8E970007304B /* MRCTabBarController.m */; };
+		E5F666CF1E8B8E980007304B /* MRCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666C11E8B8E970007304B /* MRCTableViewController.m */; };
+		E5F666D01E8B8E980007304B /* MRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666C31E8B8E970007304B /* MRCViewController.m */; };
+		E5F666D11E8B8E980007304B /* MRCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666C51E8B8E970007304B /* MRCWebViewController.m */; };
+		E5F666D21E8B8E980007304B /* MRCWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5F666C61E8B8E970007304B /* MRCWebViewController.xib */; };
+		E5F666D31E8B8E980007304B /* UINavigationItem+MRCBackBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666C81E8B8E970007304B /* UINavigationItem+MRCBackBarButtonItem.m */; };
+		E5F666D41E8B8E980007304B /* UISearchBar+MRCShowsCancelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666CA1E8B8E980007304B /* UISearchBar+MRCShowsCancelButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +110,6 @@
 		E56E71C51E713964006D0D25 /* RAC_TestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAC_TestUITests.m; sourceTree = "<group>"; };
 		E56E71C71E713964006D0D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5D177E81E8272B10091D812 /* RAC_Test-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RAC_Test-prefix.pch"; sourceTree = "<group>"; };
-		E5D177E91E8275CE0091D812 /* GloableDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GloableDefine.h; sourceTree = "<group>"; };
 		E5D177F21E827A3F0091D812 /* man.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = man.jpg; sourceTree = "<group>"; };
 		E5D177F31E827A3F0091D812 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
 		E5D177F61E8283F30091D812 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +117,48 @@
 		E5D177F91E8291780091D812 /* 56logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 56logo.png; sourceTree = "<group>"; };
 		E5D177FC1E83A68D0091D812 /* RACNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACNetWorkManager.h; sourceTree = "<group>"; };
 		E5D177FD1E83A68D0091D812 /* RACNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACNetWorkManager.m; sourceTree = "<group>"; };
+		E5F666751E8B65960007304B /* RACViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACViewController.h; sourceTree = "<group>"; };
+		E5F666761E8B65960007304B /* RACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACViewController.m; sourceTree = "<group>"; };
+		E5F666781E8B65CA0007304B /* RACViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACViewModel.h; sourceTree = "<group>"; };
+		E5F666791E8B65CA0007304B /* RACViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACViewModel.m; sourceTree = "<group>"; };
+		E5F6669A1E8B68A60007304B /* MRCNavigationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCNavigationProtocol.h; sourceTree = "<group>"; };
+		E5F6669B1E8B68A60007304B /* MRCSegmentedControlViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCSegmentedControlViewModel.h; sourceTree = "<group>"; };
+		E5F6669C1E8B68A60007304B /* MRCSegmentedControlViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCSegmentedControlViewModel.m; sourceTree = "<group>"; };
+		E5F6669D1E8B68A60007304B /* MRCTabBarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCTabBarViewModel.h; sourceTree = "<group>"; };
+		E5F6669E1E8B68A60007304B /* MRCTabBarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCTabBarViewModel.m; sourceTree = "<group>"; };
+		E5F6669F1E8B68A60007304B /* MRCTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCTableViewModel.h; sourceTree = "<group>"; };
+		E5F666A01E8B68A60007304B /* MRCTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCTableViewModel.m; sourceTree = "<group>"; };
+		E5F666A11E8B68A60007304B /* MRCViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCViewModel.h; sourceTree = "<group>"; };
+		E5F666A21E8B68A60007304B /* MRCViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCViewModel.m; sourceTree = "<group>"; };
+		E5F666A31E8B68A60007304B /* MRCViewModelServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCViewModelServices.h; sourceTree = "<group>"; };
+		E5F666A41E8B68A60007304B /* MRCViewModelServicesImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCViewModelServicesImpl.h; sourceTree = "<group>"; };
+		E5F666A51E8B68A60007304B /* MRCViewModelServicesImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCViewModelServicesImpl.m; sourceTree = "<group>"; };
+		E5F666A61E8B68A60007304B /* MRCWebViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCWebViewModel.h; sourceTree = "<group>"; };
+		E5F666A71E8B68A60007304B /* MRCWebViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCWebViewModel.m; sourceTree = "<group>"; };
+		E5F666AF1E8B696C0007304B /* GloabelDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GloabelDefine.h; sourceTree = "<group>"; };
+		E5F666B01E8B6B4A0007304B /* MRCRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCRouter.h; sourceTree = "<group>"; };
+		E5F666B11E8B6B4A0007304B /* MRCRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCRouter.m; sourceTree = "<group>"; };
+		E5F666B41E8B6C380007304B /* MRCViewControllerAnimatedTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCViewControllerAnimatedTransition.h; sourceTree = "<group>"; };
+		E5F666B51E8B6C380007304B /* MRCViewControllerAnimatedTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCViewControllerAnimatedTransition.m; sourceTree = "<group>"; };
+		E5F666B81E8B8E970007304B /* MRCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCNavigationController.h; sourceTree = "<group>"; };
+		E5F666B91E8B8E970007304B /* MRCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCNavigationController.m; sourceTree = "<group>"; };
+		E5F666BA1E8B8E970007304B /* MRCNavigationControllerStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCNavigationControllerStack.h; sourceTree = "<group>"; };
+		E5F666BB1E8B8E970007304B /* MRCNavigationControllerStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCNavigationControllerStack.m; sourceTree = "<group>"; };
+		E5F666BC1E8B8E970007304B /* MRCSegmentedControlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCSegmentedControlController.h; sourceTree = "<group>"; };
+		E5F666BD1E8B8E970007304B /* MRCSegmentedControlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCSegmentedControlController.m; sourceTree = "<group>"; };
+		E5F666BE1E8B8E970007304B /* MRCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCTabBarController.h; sourceTree = "<group>"; };
+		E5F666BF1E8B8E970007304B /* MRCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCTabBarController.m; sourceTree = "<group>"; };
+		E5F666C01E8B8E970007304B /* MRCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCTableViewController.h; sourceTree = "<group>"; };
+		E5F666C11E8B8E970007304B /* MRCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCTableViewController.m; sourceTree = "<group>"; };
+		E5F666C21E8B8E970007304B /* MRCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCViewController.h; sourceTree = "<group>"; };
+		E5F666C31E8B8E970007304B /* MRCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCViewController.m; sourceTree = "<group>"; };
+		E5F666C41E8B8E970007304B /* MRCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCWebViewController.h; sourceTree = "<group>"; };
+		E5F666C51E8B8E970007304B /* MRCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCWebViewController.m; sourceTree = "<group>"; };
+		E5F666C61E8B8E970007304B /* MRCWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MRCWebViewController.xib; sourceTree = "<group>"; };
+		E5F666C71E8B8E970007304B /* UINavigationItem+MRCBackBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+MRCBackBarButtonItem.h"; sourceTree = "<group>"; };
+		E5F666C81E8B8E970007304B /* UINavigationItem+MRCBackBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+MRCBackBarButtonItem.m"; sourceTree = "<group>"; };
+		E5F666C91E8B8E980007304B /* UISearchBar+MRCShowsCancelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+MRCShowsCancelButton.h"; sourceTree = "<group>"; };
+		E5F666CA1E8B8E980007304B /* UISearchBar+MRCShowsCancelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+MRCShowsCancelButton.m"; sourceTree = "<group>"; };
 		EFD79FE02FB214F2AD74BB7F /* Pods-RAC_TestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC_TestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RAC_TestUITests/Pods-RAC_TestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F62EF0D3A7E9414FA6B0DFB2 /* Pods_RAC_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RAC_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -177,6 +238,9 @@
 		E525436E1E83B84800EE244C /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				E5F666721E8B60FA0007304B /* model */,
+				E5F666731E8B60FA0007304B /* view */,
+				E5F666741E8B60FA0007304B /* viewModel */,
 				E515000B1E8A6159001F0DEA /* CBStoreHouseRefreshControl */,
 				E525436F1E83B86300EE244C /* firstViewModel.h */,
 				E52543701E83B86300EE244C /* firstViewModel.m */,
@@ -222,9 +286,9 @@
 				E56E71B11E713964006D0D25 /* Info.plist */,
 				E525436E1E83B84800EE244C /* Class */,
 				E5D177FB1E83A63D0091D812 /* NetWork */,
+				E5F666AE1E8B69520007304B /* Gloable */,
 				E56E71A01E713964006D0D25 /* Supporting Files */,
 				E5D177E81E8272B10091D812 /* RAC_Test-prefix.pch */,
-				E5D177E91E8275CE0091D812 /* GloableDefine.h */,
 			);
 			path = RAC_Test;
 			sourceTree = "<group>";
@@ -285,6 +349,100 @@
 				E5D177FD1E83A68D0091D812 /* RACNetWorkManager.m */,
 			);
 			path = NetWork;
+			sourceTree = "<group>";
+		};
+		E5F666721E8B60FA0007304B /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E5F666731E8B60FA0007304B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E5F666B71E8B8E970007304B /* BaseClass */,
+				E5F666751E8B65960007304B /* RACViewController.h */,
+				E5F666761E8B65960007304B /* RACViewController.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		E5F666741E8B60FA0007304B /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E5F666991E8B68A60007304B /* BaseClass */,
+				E5F666781E8B65CA0007304B /* RACViewModel.h */,
+				E5F666791E8B65CA0007304B /* RACViewModel.m */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		E5F666991E8B68A60007304B /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				E5F6669A1E8B68A60007304B /* MRCNavigationProtocol.h */,
+				E5F6669B1E8B68A60007304B /* MRCSegmentedControlViewModel.h */,
+				E5F6669C1E8B68A60007304B /* MRCSegmentedControlViewModel.m */,
+				E5F6669D1E8B68A60007304B /* MRCTabBarViewModel.h */,
+				E5F6669E1E8B68A60007304B /* MRCTabBarViewModel.m */,
+				E5F6669F1E8B68A60007304B /* MRCTableViewModel.h */,
+				E5F666A01E8B68A60007304B /* MRCTableViewModel.m */,
+				E5F666A11E8B68A60007304B /* MRCViewModel.h */,
+				E5F666A21E8B68A60007304B /* MRCViewModel.m */,
+				E5F666A31E8B68A60007304B /* MRCViewModelServices.h */,
+				E5F666A41E8B68A60007304B /* MRCViewModelServicesImpl.h */,
+				E5F666A51E8B68A60007304B /* MRCViewModelServicesImpl.m */,
+				E5F666A61E8B68A60007304B /* MRCWebViewModel.h */,
+				E5F666A71E8B68A60007304B /* MRCWebViewModel.m */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		E5F666AE1E8B69520007304B /* Gloable */ = {
+			isa = PBXGroup;
+			children = (
+				E5F666B01E8B6B4A0007304B /* MRCRouter.h */,
+				E5F666B11E8B6B4A0007304B /* MRCRouter.m */,
+				E5F666AF1E8B696C0007304B /* GloabelDefine.h */,
+				E5F666B31E8B6C380007304B /* Transition */,
+			);
+			path = Gloable;
+			sourceTree = "<group>";
+		};
+		E5F666B31E8B6C380007304B /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				E5F666B41E8B6C380007304B /* MRCViewControllerAnimatedTransition.h */,
+				E5F666B51E8B6C380007304B /* MRCViewControllerAnimatedTransition.m */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		E5F666B71E8B8E970007304B /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				E5F666B81E8B8E970007304B /* MRCNavigationController.h */,
+				E5F666B91E8B8E970007304B /* MRCNavigationController.m */,
+				E5F666BA1E8B8E970007304B /* MRCNavigationControllerStack.h */,
+				E5F666BB1E8B8E970007304B /* MRCNavigationControllerStack.m */,
+				E5F666BC1E8B8E970007304B /* MRCSegmentedControlController.h */,
+				E5F666BD1E8B8E970007304B /* MRCSegmentedControlController.m */,
+				E5F666BE1E8B8E970007304B /* MRCTabBarController.h */,
+				E5F666BF1E8B8E970007304B /* MRCTabBarController.m */,
+				E5F666C01E8B8E970007304B /* MRCTableViewController.h */,
+				E5F666C11E8B8E970007304B /* MRCTableViewController.m */,
+				E5F666C21E8B8E970007304B /* MRCViewController.h */,
+				E5F666C31E8B8E970007304B /* MRCViewController.m */,
+				E5F666C41E8B8E970007304B /* MRCWebViewController.h */,
+				E5F666C51E8B8E970007304B /* MRCWebViewController.m */,
+				E5F666C61E8B8E970007304B /* MRCWebViewController.xib */,
+				E5F666C71E8B8E970007304B /* UINavigationItem+MRCBackBarButtonItem.h */,
+				E5F666C81E8B8E970007304B /* UINavigationItem+MRCBackBarButtonItem.m */,
+				E5F666C91E8B8E980007304B /* UISearchBar+MRCShowsCancelButton.h */,
+				E5F666CA1E8B8E980007304B /* UISearchBar+MRCShowsCancelButton.m */,
+			);
+			path = BaseClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +564,7 @@
 				E51500211E8A7D6A001F0DEA /* storehouse.plist in Resources */,
 				E56E71B01E713964006D0D25 /* LaunchScreen.storyboard in Resources */,
 				E5D177F81E82900A0091D812 /* newGuide1-1.png in Resources */,
+				E5F666D21E8B8E980007304B /* MRCWebViewController.xib in Resources */,
 				E51500181E8A6247001F0DEA /* headViewForTableView.plist in Resources */,
 				E515001A1E8A6598001F0DEA /* Canvas 1.png in Resources */,
 				E56E71AD1E713964006D0D25 /* Assets.xcassets in Resources */,
@@ -576,14 +735,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5F666CB1E8B8E980007304B /* MRCNavigationController.m in Sources */,
+				E5F666D01E8B8E980007304B /* MRCViewController.m in Sources */,
 				E56E71A81E713964006D0D25 /* ViewController.m in Sources */,
+				E5F666CE1E8B8E980007304B /* MRCTabBarController.m in Sources */,
+				E5F666B61E8B6C380007304B /* MRCViewControllerAnimatedTransition.m in Sources */,
+				E5F666CC1E8B8E980007304B /* MRCNavigationControllerStack.m in Sources */,
 				E5D177FE1E83A68D0091D812 /* RACNetWorkManager.m in Sources */,
+				E5F666AC1E8B68A60007304B /* MRCViewModelServicesImpl.m in Sources */,
+				E5F6667A1E8B65CA0007304B /* RACViewModel.m in Sources */,
+				E5F666CF1E8B8E980007304B /* MRCTableViewController.m in Sources */,
+				E5F666D11E8B8E980007304B /* MRCWebViewController.m in Sources */,
+				E5F666A81E8B68A60007304B /* MRCSegmentedControlViewModel.m in Sources */,
+				E5F666AB1E8B68A60007304B /* MRCViewModel.m in Sources */,
 				E56E71A51E713964006D0D25 /* AppDelegate.m in Sources */,
 				E515001D1E8A6A44001F0DEA /* MyTableViewCell.m in Sources */,
 				E56E71A21E713964006D0D25 /* main.m in Sources */,
 				E51500141E8A6159001F0DEA /* CBStoreHouseRefreshControl.m in Sources */,
+				E5F666A91E8B68A60007304B /* MRCTabBarViewModel.m in Sources */,
 				E51500131E8A6159001F0DEA /* BarItem.m in Sources */,
+				E5F666D41E8B8E980007304B /* UISearchBar+MRCShowsCancelButton.m in Sources */,
+				E5F666771E8B65960007304B /* RACViewController.m in Sources */,
+				E5F666AD1E8B68A60007304B /* MRCWebViewModel.m in Sources */,
+				E5F666AA1E8B68A60007304B /* MRCTableViewModel.m in Sources */,
 				E51500161E8A6159001F0DEA /* README.md in Sources */,
+				E5F666B21E8B6B4A0007304B /* MRCRouter.m in Sources */,
+				E5F666D31E8B8E980007304B /* UINavigationItem+MRCBackBarButtonItem.m in Sources */,
+				E5F666CD1E8B8E980007304B /* MRCSegmentedControlController.m in Sources */,
 				E52543711E83B86300EE244C /* firstViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
