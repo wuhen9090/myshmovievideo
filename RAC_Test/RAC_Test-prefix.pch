@@ -29,6 +29,7 @@
 #import "CBStoreHouseRefreshControl.h"
 #import <objc/runtime.h>
 #import <YYKit/YYKit.h>
+#import <GPUImage/GPUImage.h>
 #endif
 
 #endif /* PrefixHeader_pch */

@@ -35,5 +35,25 @@
         }];
         return alertSignal;
     }];
+    self.dealImageCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(UIImage *inputImage) {
+        //使用黑白素描滤镜
+        GPUImageSketchFilter *disFilter = [[GPUImageSketchFilter alloc] init];
+        
+        //设置要渲染的区域
+        [disFilter forceProcessingAtSize:inputImage.size];
+        [disFilter useNextFrameForImageCapture];
+        
+        //获取数据源
+        GPUImagePicture *stillImageSource = [[GPUImagePicture alloc]initWithImage:inputImage];
+        
+        //添加上滤镜
+        [stillImageSource addTarget:disFilter];
+        //开始渲染
+        [stillImageSource processImage];
+        //获取渲染后的图片
+        UIImage *newImage = [disFilter imageFromCurrentFramebuffer];
+
+        return [RACSignal return:newImage];
+    }];
 }
 @end

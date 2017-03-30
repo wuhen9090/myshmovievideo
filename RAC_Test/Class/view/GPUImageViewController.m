@@ -10,6 +10,7 @@
 #import "GPUimageViewModel.h"
 @interface GPUImageViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (nonatomic, strong) UIButton *selectImageButton;
+@property (nonatomic, strong) UIButton *dealImageButton;
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UIAlertController *selcectVC;
 @property (nonatomic, strong) UIImagePickerController *imagePickerController;
@@ -43,7 +44,17 @@
         UIImage *image = [tuple.second objectForKey:UIImagePickerControllerOriginalImage];
         self.imageView.image = image;
     }];
+    [[self.dealImageButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        [((GPUimageViewModel*)self.viewModel).dealImageCommand execute:self.imageView.image];
+    }];
 
+//    [((GPUimageViewModel*)self.viewModel).dealImageCommand.executionSignals subscribeNext:^(RACSignal *output) {
+//        [output subscribeNext:^(id x) {
+//            [self.imageView setImage:x];
+//        }];
+//        
+//    }];
+    RAC(self.imageView,image) = ((GPUimageViewModel*)self.viewModel).dealImageCommand.executionSignals.switchToLatest;
 //    [self.selectImageButton.rac_command.executionSignals subscribeNext:^(RACSignal* alertVCSignal) {
 //        [alertVCSignal subscribeNext:^(id x) {
 //            [self presentViewController:x animated:YES completion:^{
@@ -56,6 +67,7 @@
 - (void)initUI {
         [self.view addSubview:self.imageView];
         [self.view addSubview:self.selectImageButton];
+        [self.view addSubview:self.dealImageButton];
 //    [self addChildViewController:self.imagePickerController];
 //        self.refreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.testTableView
 //                                                                      target:self
@@ -83,9 +95,16 @@
         [self.selectImageButton mas_makeConstraints:^(MASConstraintMaker *make) {
             @strongify(self);
             make.top.equalTo(self.imageView.mas_bottom).offset(20);
-            make.centerX.equalTo(self.view.mas_centerX);
+            make.left.equalTo(self.view.mas_left).offset(50);
             make.size.mas_equalTo(CGSizeMake(100, 50));
         }];
+        [self.dealImageButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            @strongify(self);
+            make.top.equalTo(self.imageView.mas_bottom).offset(20);
+            make.left.equalTo(self.selectImageButton.mas_right).offset(20);
+            make.size.mas_equalTo(CGSizeMake(100, 50));
+        }];
+
 }
 
 - (UIImageView *)imageView {
@@ -102,6 +121,15 @@
         [_selectImageButton setBackgroundColor:[UIColor blueColor]];
     }
     return _selectImageButton;
+}
+- (UIButton *)dealImageButton{
+    if (!_dealImageButton) {
+        _dealImageButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_dealImageButton setTitle:@"处理图像" forState:UIControlStateNormal];
+        [_dealImageButton setTintColor:[UIColor redColor]];
+        [_dealImageButton setBackgroundColor:[UIColor blueColor]];
+    }
+    return _dealImageButton;
 }
 - (UIAlertController *)selcectVC{
     _selcectVC = [UIAlertController alertControllerWithTitle:@"选取图像" message:@"你喜欢的图像" preferredStyle:UIAlertControllerStyleActionSheet];
