@@ -10,8 +10,5 @@
 #import "MRCTableViewModel.h"
 #import "MRCViewModelServices.h"
 @interface firstViewModel : MRCTableViewModel
-@property (nonatomic, strong) RACSignal *loginSingal;
-@property (nonatomic, strong) RACCommand *loginCommand;
-@property (nonatomic, strong) RACCommand *didSelectCommand;
 @property (nonatomic, strong) NSArray *arrayData;
 @end

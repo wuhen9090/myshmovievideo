@@ -37,8 +37,8 @@
 - (NSDictionary *)viewModelViewMappings {
     return @{
     	@"firstViewModel": @"ViewController",
-        @"MRCHomepageViewModel": @"MRCHomepageViewController",
-        @"MRCRepoDetailViewModel": @"MRCRepoDetailViewController",
+        @"RACViewModel": @"RACViewController",
+        @"GPUimageViewModel": @"GPUImageViewController",
         @"MRCWebViewModel": @"MRCWebViewController",
         @"MRCRepoReadmeViewModel": @"MRCRepoReadmeController",
         @"MRCSelectBranchOrTagViewModel": @"MRCSelectBranchOrTagViewController",

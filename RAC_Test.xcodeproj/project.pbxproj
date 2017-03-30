@@ -16,18 +16,20 @@
 		E51500161E8A6159001F0DEA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E51500121E8A6159001F0DEA /* README.md */; };
 		E51500181E8A6247001F0DEA /* headViewForTableView.plist in Resources */ = {isa = PBXBuildFile; fileRef = E51500171E8A6247001F0DEA /* headViewForTableView.plist */; };
 		E515001A1E8A6598001F0DEA /* Canvas 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E51500191E8A6598001F0DEA /* Canvas 1.png */; };
-		E515001D1E8A6A44001F0DEA /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E515001C1E8A6A44001F0DEA /* MyTableViewCell.m */; };
 		E515001F1E8A6EF9001F0DEA /* AKTA.plist in Resources */ = {isa = PBXBuildFile; fileRef = E515001E1E8A6EF9001F0DEA /* AKTA.plist */; };
 		E51500211E8A7D6A001F0DEA /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = E51500201E8A7D6A001F0DEA /* storehouse.plist */; };
 		E52543711E83B86300EE244C /* firstViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E52543701E83B86300EE244C /* firstViewModel.m */; };
 		E56E71A21E713964006D0D25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E71A11E713964006D0D25 /* main.m */; };
 		E56E71A51E713964006D0D25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E71A41E713964006D0D25 /* AppDelegate.m */; };
-		E56E71A81E713964006D0D25 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E71A71E713964006D0D25 /* ViewController.m */; };
 		E56E71AB1E713964006D0D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56E71A91E713964006D0D25 /* Main.storyboard */; };
 		E56E71AD1E713964006D0D25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56E71AC1E713964006D0D25 /* Assets.xcassets */; };
 		E56E71B01E713964006D0D25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56E71AE1E713964006D0D25 /* LaunchScreen.storyboard */; };
 		E56E71BB1E713964006D0D25 /* RAC_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E71BA1E713964006D0D25 /* RAC_TestTests.m */; };
 		E56E71C61E713964006D0D25 /* RAC_TestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E71C51E713964006D0D25 /* RAC_TestUITests.m */; };
+		E58624AB1E8CB80700684D31 /* GPUimageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E58624AA1E8CB80700684D31 /* GPUimageViewModel.m */; };
+		E58624AE1E8CB8B700684D31 /* GPUImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E58624AD1E8CB8B700684D31 /* GPUImageViewController.m */; };
+		E58624B21E8CBED300684D31 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E58624B11E8CBED300684D31 /* MyTableViewCell.m */; };
+		E58624B51E8CBFB700684D31 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E58624B41E8CBFB700684D31 /* ViewController.m */; };
 		E5D177F41E827A3F0091D812 /* man.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5D177F21E827A3F0091D812 /* man.jpg */; };
 		E5D177F51E827A3F0091D812 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D177F31E827A3F0091D812 /* person.png */; };
 		E5D177F81E82900A0091D812 /* newGuide1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D177F71E82900A0091D812 /* newGuide1-1.png */; };
@@ -88,18 +90,14 @@
 		E51500121E8A6159001F0DEA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E51500171E8A6247001F0DEA /* headViewForTableView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = headViewForTableView.plist; sourceTree = "<group>"; };
 		E51500191E8A6598001F0DEA /* Canvas 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Canvas 1.png"; sourceTree = "<group>"; };
-		E515001B1E8A6A44001F0DEA /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
-		E515001C1E8A6A44001F0DEA /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 		E515001E1E8A6EF9001F0DEA /* AKTA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AKTA.plist; sourceTree = "<group>"; };
 		E51500201E8A7D6A001F0DEA /* storehouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = storehouse.plist; sourceTree = "<group>"; };
-		E525436F1E83B86300EE244C /* firstViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstViewModel.h; sourceTree = "<group>"; };
-		E52543701E83B86300EE244C /* firstViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstViewModel.m; sourceTree = "<group>"; };
+		E525436F1E83B86300EE244C /* firstViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = firstViewModel.h; path = ../firstViewModel.h; sourceTree = "<group>"; };
+		E52543701E83B86300EE244C /* firstViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = firstViewModel.m; path = ../firstViewModel.m; sourceTree = "<group>"; };
 		E56E719D1E713964006D0D25 /* RAC_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAC_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56E71A11E713964006D0D25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E56E71A31E713964006D0D25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E56E71A41E713964006D0D25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E56E71A61E713964006D0D25 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E56E71A71E713964006D0D25 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E56E71AC1E713964006D0D25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E56E71AF1E713964006D0D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E56E71B11E713964006D0D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +107,14 @@
 		E56E71C11E713964006D0D25 /* RAC_TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RAC_TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56E71C51E713964006D0D25 /* RAC_TestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAC_TestUITests.m; sourceTree = "<group>"; };
 		E56E71C71E713964006D0D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E58624A91E8CB80700684D31 /* GPUimageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUimageViewModel.h; sourceTree = "<group>"; };
+		E58624AA1E8CB80700684D31 /* GPUimageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUimageViewModel.m; sourceTree = "<group>"; };
+		E58624AC1E8CB8B700684D31 /* GPUImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageViewController.h; sourceTree = "<group>"; };
+		E58624AD1E8CB8B700684D31 /* GPUImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageViewController.m; sourceTree = "<group>"; };
+		E58624B01E8CBED300684D31 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		E58624B11E8CBED300684D31 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		E58624B31E8CBFB700684D31 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E58624B41E8CBFB700684D31 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E5D177E81E8272B10091D812 /* RAC_Test-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RAC_Test-prefix.pch"; sourceTree = "<group>"; };
 		E5D177F21E827A3F0091D812 /* man.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = man.jpg; sourceTree = "<group>"; };
 		E5D177F31E827A3F0091D812 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
@@ -242,10 +248,6 @@
 				E5F666731E8B60FA0007304B /* view */,
 				E5F666741E8B60FA0007304B /* viewModel */,
 				E515000B1E8A6159001F0DEA /* CBStoreHouseRefreshControl */,
-				E525436F1E83B86300EE244C /* firstViewModel.h */,
-				E52543701E83B86300EE244C /* firstViewModel.m */,
-				E515001B1E8A6A44001F0DEA /* MyTableViewCell.h */,
-				E515001C1E8A6A44001F0DEA /* MyTableViewCell.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -278,8 +280,6 @@
 			children = (
 				E56E71A31E713964006D0D25 /* AppDelegate.h */,
 				E56E71A41E713964006D0D25 /* AppDelegate.m */,
-				E56E71A61E713964006D0D25 /* ViewController.h */,
-				E56E71A71E713964006D0D25 /* ViewController.m */,
 				E56E71A91E713964006D0D25 /* Main.storyboard */,
 				E56E71AC1E713964006D0D25 /* Assets.xcassets */,
 				E56E71AE1E713964006D0D25 /* LaunchScreen.storyboard */,
@@ -317,6 +317,15 @@
 				E56E71C71E713964006D0D25 /* Info.plist */,
 			);
 			path = RAC_TestUITests;
+			sourceTree = "<group>";
+		};
+		E58624AF1E8CBEA700684D31 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E58624B01E8CBED300684D31 /* MyTableViewCell.h */,
+				E58624B11E8CBED300684D31 /* MyTableViewCell.m */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		E5D177F01E827A3F0091D812 /* Resource */ = {
@@ -361,9 +370,14 @@
 		E5F666731E8B60FA0007304B /* view */ = {
 			isa = PBXGroup;
 			children = (
+				E58624AF1E8CBEA700684D31 /* TableViewCell */,
 				E5F666B71E8B8E970007304B /* BaseClass */,
 				E5F666751E8B65960007304B /* RACViewController.h */,
 				E5F666761E8B65960007304B /* RACViewController.m */,
+				E58624AC1E8CB8B700684D31 /* GPUImageViewController.h */,
+				E58624AD1E8CB8B700684D31 /* GPUImageViewController.m */,
+				E58624B31E8CBFB700684D31 /* ViewController.h */,
+				E58624B41E8CBFB700684D31 /* ViewController.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -374,6 +388,10 @@
 				E5F666991E8B68A60007304B /* BaseClass */,
 				E5F666781E8B65CA0007304B /* RACViewModel.h */,
 				E5F666791E8B65CA0007304B /* RACViewModel.m */,
+				E58624A91E8CB80700684D31 /* GPUimageViewModel.h */,
+				E58624AA1E8CB80700684D31 /* GPUimageViewModel.m */,
+				E525436F1E83B86300EE244C /* firstViewModel.h */,
+				E52543701E83B86300EE244C /* firstViewModel.m */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -737,19 +755,19 @@
 			files = (
 				E5F666CB1E8B8E980007304B /* MRCNavigationController.m in Sources */,
 				E5F666D01E8B8E980007304B /* MRCViewController.m in Sources */,
-				E56E71A81E713964006D0D25 /* ViewController.m in Sources */,
+				E58624AE1E8CB8B700684D31 /* GPUImageViewController.m in Sources */,
 				E5F666CE1E8B8E980007304B /* MRCTabBarController.m in Sources */,
 				E5F666B61E8B6C380007304B /* MRCViewControllerAnimatedTransition.m in Sources */,
 				E5F666CC1E8B8E980007304B /* MRCNavigationControllerStack.m in Sources */,
 				E5D177FE1E83A68D0091D812 /* RACNetWorkManager.m in Sources */,
 				E5F666AC1E8B68A60007304B /* MRCViewModelServicesImpl.m in Sources */,
+				E58624B21E8CBED300684D31 /* MyTableViewCell.m in Sources */,
 				E5F6667A1E8B65CA0007304B /* RACViewModel.m in Sources */,
 				E5F666CF1E8B8E980007304B /* MRCTableViewController.m in Sources */,
 				E5F666D11E8B8E980007304B /* MRCWebViewController.m in Sources */,
 				E5F666A81E8B68A60007304B /* MRCSegmentedControlViewModel.m in Sources */,
 				E5F666AB1E8B68A60007304B /* MRCViewModel.m in Sources */,
 				E56E71A51E713964006D0D25 /* AppDelegate.m in Sources */,
-				E515001D1E8A6A44001F0DEA /* MyTableViewCell.m in Sources */,
 				E56E71A21E713964006D0D25 /* main.m in Sources */,
 				E51500141E8A6159001F0DEA /* CBStoreHouseRefreshControl.m in Sources */,
 				E5F666A91E8B68A60007304B /* MRCTabBarViewModel.m in Sources */,
@@ -759,8 +777,10 @@
 				E5F666AD1E8B68A60007304B /* MRCWebViewModel.m in Sources */,
 				E5F666AA1E8B68A60007304B /* MRCTableViewModel.m in Sources */,
 				E51500161E8A6159001F0DEA /* README.md in Sources */,
+				E58624B51E8CBFB700684D31 /* ViewController.m in Sources */,
 				E5F666B21E8B6B4A0007304B /* MRCRouter.m in Sources */,
 				E5F666D31E8B8E980007304B /* UINavigationItem+MRCBackBarButtonItem.m in Sources */,
+				E58624AB1E8CB80700684D31 /* GPUimageViewModel.m in Sources */,
 				E5F666CD1E8B8E980007304B /* MRCSegmentedControlController.m in Sources */,
 				E52543711E83B86300EE244C /* firstViewModel.m in Sources */,
 			);

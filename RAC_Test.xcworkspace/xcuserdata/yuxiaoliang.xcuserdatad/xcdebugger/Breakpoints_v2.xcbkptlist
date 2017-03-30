@@ -25,22 +25,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RAC_Test/Class/firstViewModel.m"
-            timestampString = "512472232.018048"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "@implementation firstViewModel"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "RAC_Test/NetWork/RACNetWorkManager.m"
             timestampString = "511950913.229551"
             startingColumnNumber = "9223372036854775807"
@@ -129,22 +113,6 @@
             endingLineNumber = "58"
             landmarkName = "-requestSoureDataFromUrlUsingGET:paramData:successBlock:fialBlock:"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RAC_Test/Class/firstViewModel.m"
-            timestampString = "512472232.018048"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "@implementation firstViewModel"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -360,59 +328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RAC_Test/Class/firstViewModel.m"
-            timestampString = "512472232.018048"
+            timestampString = "512540906.210701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "-setUpSingal"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[firstViewModel setUpSingal]"
-                  moduleName = "RAC_Test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Class/firstViewModel.m"
-                  timestampString = "512536753.847794"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__29-[firstViewModel setUpSingal]_block_invoke"
-                  moduleName = "RAC_Test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Class/firstViewModel.m"
-                  timestampString = "512536753.848915"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "112">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RAC_Test/Class/firstViewModel.m"
-            timestampString = "512472232.018048"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "-setUpSingal"
             landmarkType = "7">
          </BreakpointContent>

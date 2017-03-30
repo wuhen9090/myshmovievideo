@@ -36,6 +36,7 @@
     self = [super init];
     if (self) {
         self.viewModel = viewModel;
+        self.view.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }

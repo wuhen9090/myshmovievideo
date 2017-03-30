@@ -7,8 +7,9 @@
 //
 
 #import "firstViewModel.h"
+#import "RACViewModel.h"
+#import "GPUimageViewModel.h"
 @interface firstViewModel()
-@property (nonatomic, strong) id<MRCViewModelServices> services;
 @end
 @implementation firstViewModel
 
@@ -19,35 +20,8 @@
     }
     return self;
 }
-//- (instancetype)initWithServices:(id<MRCViewModelServices>)services params:(NSDictionary *)params {
-//    self = [super init];
-//    if (self) {
-//        self.title    = params[@"title"];
-//        self.services = services;
-//        self.params   = params;
-//    }
-//    return self;
-//}
 
-- (void)setUpSingal {
-    self.loginSingal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        NSDictionary *param = @{@"phoneNumber":@"13456789001", @"password":@"f379eaf3c831b04de153469d1bec345e"};
-        [[RACNetWorkManager shareNetWorkManage] requestSoureDataFromUrlUsingGET:@"" paramData:param successBlock:^(NSDictionary *dict, BOOL success) {
-            [subscriber sendNext:dict];
-            [subscriber sendCompleted];
-        } fialBlock:^(NSError *error) {
-            [subscriber sendError:error];
-            [subscriber sendCompleted];
-        }];
-
-        return nil;
-    }];
-    self.loginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        NSLog(@"test");
-        return [RACSignal empty];
-//        return self.loginSingal;
-    }];
-    
+- (void)setUpSingal {    
     self.arrayData = @[@"RACTest",@"GPUImage"];
     self.title = @"firstView";
     self.dataSource = @[self.arrayData];
@@ -56,9 +30,20 @@
         NSUInteger index = indexPath.row;
         switch (index) {
             case 0:
-//                [self.]
+            {
+                NSDictionary *paramRAC = @{@"title":@"RAC"};
+                RACViewModel *viewModel = [[RACViewModel alloc] initWithServices:self.services params:paramRAC];
+                [self.services pushViewModel:viewModel animated:YES];
                 break;
-                
+            }
+            case 1:
+            {
+                NSDictionary *paramGPU = @{@"title":@"GPUImage"};
+                GPUimageViewModel *viewModel = [[GPUimageViewModel alloc] initWithServices:self.services params:paramGPU];
+                [self.services pushViewModel:viewModel animated:YES];
+                break;
+            }
+
             default:
                 break;
         }

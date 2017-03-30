@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MRCViewModelServices.h"
-@interface RACViewModel : NSObject
-@property (nonatomic, strong, readonly) id<MRCViewModelServices> services;
+@interface RACViewModel : MRCViewModel
+@property (nonatomic, strong) RACSignal *loginSingal;
+@property (nonatomic, strong) RACCommand *loginCommand;
 @end

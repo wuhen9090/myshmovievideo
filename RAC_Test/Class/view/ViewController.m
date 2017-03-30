@@ -11,11 +11,6 @@
 #import "CBStoreHouseRefreshControl.h"
 #import "MyTableViewCell.h"
 @interface ViewController ()
-//@property (nonatomic, strong) firstViewModel *viewModel;
-@property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) UIButton *testButton;
-@property (nonatomic, strong) UITableView *testTableView;
-@property (nonatomic, strong) CBStoreHouseRefreshControl *refreshControl;
 @end
 
 @implementation ViewController
@@ -37,38 +32,6 @@
     [singal subscribeNext:^(id x) {
         NSLog(@"%@", x);
     }];
-
-//     @weakify(self);
-//    [RACObserve(self.viewModel, arrayData) subscribeNext:^(id x) {
-//        @strongify(self);
-//        [self.testTableView reloadData];
-//    }];
-    
-    //第一种方式
-    //    [[self.testButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-    //
-    //        [self.navigationController pushViewController:[[UIViewController alloc] init] animated:YES];
-    //    }];
-    //第二种
-    //    self.testButton.rac_command = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
-    //        return self.viewModel.loginSingal;
-    //    }];
-    //    [self.testButton.rac_command.executionSignals subscribeNext:^(RACSignal *loginSingal) {
-    //        [loginSingal subscribeNext:^(id x) {
-    //            if ([x integerValue] > 0) {
-    //                NSLog(@"denglu success");
-    //            }else{
-    //                NSLog(@"denglu fail");
-    //            }
-    //        }];
-    //    }];
-    //第三中
-    //   [[self.testButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-    //      [self.viewModel.loginCommand execute:nil];
-    //   }];
-    
-//    self.testButton.rac_command = self.viewModel.loginCommand;
-
 
 }
 - (void)initUI {
@@ -183,17 +146,17 @@
 //    [self.refreshControl scrollViewDidEndDragging];
 //}
 
-#pragma mark - Listening for the user to trigger a refresh
-
-- (void)refreshTriggered:(id)sender
-{
-    [self performSelector:@selector(finishRefreshControl) withObject:nil afterDelay:3 inModes:@[NSRunLoopCommonModes]];
-}
-
-- (void)finishRefreshControl
-{
-    [self.refreshControl finishingLoading];
-}
+//#pragma mark - Listening for the user to trigger a refresh
+//
+//- (void)refreshTriggered:(id)sender
+//{
+//    [self performSelector:@selector(finishRefreshControl) withObject:nil afterDelay:3 inModes:@[NSRunLoopCommonModes]];
+//}
+//
+//- (void)finishRefreshControl
+//{
+//    [self.refreshControl finishingLoading];
+//}
 
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
