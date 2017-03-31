@@ -134,14 +134,14 @@
 - (UIAlertController *)selcectVC{
     _selcectVC = [UIAlertController alertControllerWithTitle:@"选取图像" message:@"你喜欢的图像" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-//        imagePickerController.delegate = self;
-//        imagePickerController.allowsEditing = YES;
-//        imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
-//        
-//        [self presentViewController:imagePickerController animated:YES completion:^{
-//            
-//        }];
+        UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+        imagePickerController.delegate = self;
+        imagePickerController.allowsEditing = YES;
+        imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        [self presentViewController:imagePickerController animated:YES completion:^{
+            
+        }];
         
     }];
     UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {

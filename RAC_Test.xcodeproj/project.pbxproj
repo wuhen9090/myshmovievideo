@@ -539,7 +539,8 @@
 				TargetAttributes = {
 					E56E719C1E713964006D0D25 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 559F36FNHV;
+						ProvisioningStyle = Manual;
 					};
 					E56E71B51E713964006D0D25 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -930,12 +931,18 @@
 			baseConfigurationReference = 8C7988406FE303E6B9077B2D /* Pods-RAC_Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiaodong guo (F263737GB7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xiaodong guo (F263737GB7)";
+				DEVELOPMENT_TEAM = 559F36FNHV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RAC_Test/RAC_Test-prefix.pch";
 				INFOPLIST_FILE = RAC_Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "yu.RAC-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.56.mobile.video;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f3c24583-94f4-4a64-b494-2a3572ec8d53";
+				PROVISIONING_PROFILE_SPECIFIER = FiveSixMobile;
 			};
 			name = Debug;
 		};
@@ -944,11 +951,14 @@
 			baseConfigurationReference = 8D0ABA6D486B3F5949A49728 /* Pods-RAC_Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: xiaodong guo (F263737GB7)";
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RAC_Test/RAC_Test-prefix.pch";
 				INFOPLIST_FILE = RAC_Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "yu.RAC-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.56.mobile.video;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
