@@ -12,4 +12,6 @@
 @property (nonatomic, strong) RACCommand *importImageCommand;
 @property (nonatomic, strong) RACCommand *dealImageCommand ;
 @property (nonatomic, strong) RACCommand *dealCameraCommand ;
+
+@property (nonatomic, strong) NSArray    *filterArray ;
 @end

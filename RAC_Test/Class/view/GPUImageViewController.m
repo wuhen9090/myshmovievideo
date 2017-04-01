@@ -8,7 +8,7 @@
 
 #import "GPUImageViewController.h"
 #import "GPUimageViewModel.h"
-@interface GPUImageViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface GPUImageViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 @property (nonatomic, strong) UIButton *selectImageButton;
 @property (nonatomic, strong) UIButton *dealImageButton;
 @property (nonatomic, strong) UIButton *dealCaptureButton;
@@ -19,7 +19,12 @@
 @property (nonatomic, strong) GPUImageView *cameraImageView;
 @property (nonatomic, assign) BOOL isCaoeraDeal;
 @property (nonatomic, strong) UIAlertController *selcectVC;
+@property (nonatomic, strong) UIPickerView *selcectPickerView;
+@property (nonatomic, strong) NSArray *filterArray;
 @property (nonatomic, strong) UIImagePickerController *imagePickerController;
+@property (nonatomic, strong) UIButton *rightButton;
+@property (nonatomic, assign) NSInteger slelectFilterIndex;
+@property (nonatomic, assign) NSInteger imageType;
 @end
 
 @implementation GPUImageViewController
@@ -36,11 +41,13 @@
 }
 - (void)bindViewModel {
     [super bindViewModel];
+
     [[self.selectImageButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         [self presentViewController:self.selcectVC animated:YES completion:^{
             
         }];
     }];
+    //处理图像
     [[ self rac_signalForSelector:@selector(imagePickerController:didFinishPickingMediaWithInfo:) fromProtocol:@protocol(UIImagePickerControllerDelegate)] subscribeNext:^(RACTuple *tuple) {
         UIImagePickerController *vc = tuple.first;
         [vc dismissViewControllerAnimated:YES completion:^{
@@ -49,9 +56,15 @@
         
         UIImage *image = [tuple.second objectForKey:UIImagePickerControllerOriginalImage];
         self.imageView.image = image;
+        self.imageType = 1;
+        [self.cammera stopCameraCapture];
+        self.cameraImageView.hidden = YES;
+        self.imageView.hidden = NO;
     }];
     [[self.dealImageButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        [((GPUimageViewModel*)self.viewModel).dealImageCommand execute:self.imageView.image];
+        //拉起选择器
+        self.selcectPickerView.hidden = NO;
+        self.dealCaptureFilterButton.hidden = NO;
     }];
 
 //    [((GPUimageViewModel*)self.viewModel).dealImageCommand.executionSignals subscribeNext:^(RACSignal *output) {
@@ -60,26 +73,45 @@
 //        }];
 //        
 //    }];
+    //显示处理过得图像
     RAC(self.imageView,image) = ((GPUimageViewModel*)self.viewModel).dealImageCommand.executionSignals.switchToLatest;
     
     [[self.dealCaptureButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         self.imageView.hidden = YES;
         [self.cammera startCameraCapture];
+        self.imageType = 2;
+        self.imageView.hidden = YES;
+        self.cameraImageView.hidden = NO;
  
     }];
+    //处理摄像
     [[self.dealCaptureFilterButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(RACSignal *output) {
-        self.imageView.hidden = YES;
-        RACTuple *data = [RACTuple tupleWithObjectsFromArray:@[self.cammera,self.cameraImageView,self.fileter]];
-        if (!self.isCaoeraDeal) {
-            [((GPUimageViewModel*)self.viewModel).dealCameraCommand execute:data];
-            self.isCaoeraDeal = YES;
-        }else
-        {
-            self.fileter = [[GPUImageFilter alloc] init];
-            [self.cammera addTarget:self.fileter];
-            [self.fileter addTarget:self.cameraImageView];
-            self.isCaoeraDeal = NO;
+        self.selcectPickerView.hidden = YES;
+        self.dealCaptureFilterButton.hidden = YES;
+        if (self.imageType == 1) {
+            self.imageView.hidden = NO;
+            [self.cammera stopCameraCapture];
+            RACTuple *data = [RACTuple tupleWithObjectsFromArray:@[self.imageView.image,[[NSNumber alloc] initWithInteger:self.slelectFilterIndex]]];
+
+            [((GPUimageViewModel*)self.viewModel).dealImageCommand execute:data];
         }
+        else if (self.imageType == 2)
+        {
+            self.imageView.hidden = YES;
+            RACTuple *data = [RACTuple tupleWithObjectsFromArray:@[self.cammera,self.cameraImageView,self.fileter,[[NSNumber alloc] initWithInteger:self.slelectFilterIndex]]];
+            //给model传递参数数据并添加过滤器
+            [((GPUimageViewModel*)self.viewModel).dealCameraCommand execute:data];
+        }
+       //        if (!self.isCaoeraDeal) {
+//            [((GPUimageViewModel*)self.viewModel).dealCameraCommand execute:data];
+//            self.isCaoeraDeal = YES;
+//        }else
+//        {
+//            self.fileter = [[GPUImageFilter alloc] init];
+//            [self.cammera addTarget:self.fileter];
+//            [self.fileter addTarget:self.cameraImageView];
+//            self.isCaoeraDeal = NO;
+//        }
  //       [self.fileter removeAllTargets];
    //     [self.cammera removeAllTargets];
      //   self.fileter = [[GPUImageColorInvertFilter alloc] init];
@@ -105,14 +137,25 @@
 //
 //        }];
 //    }];
+    [RACObserve(self.cammera,cameraPosition) subscribeNext:^(id x) {
+        if (x!=AVCaptureDevicePositionUnspecified) {
+            self.rightButton.hidden = NO;
+        }else{
+            self.rightButton.hidden = YES;
+        }
+    }];
 }
 - (void)initUI {
-        [self.view addSubview:self.imageView];
-        [self.view addSubview:self.selectImageButton];
-        [self.view addSubview:self.dealImageButton];
+    [self.view addSubview:self.imageView];
+    [self.view addSubview:self.selectImageButton];
+    [self.view addSubview:self.dealImageButton];
     [self.view addSubview:self.dealCaptureButton];
     [self.view addSubview:self.cameraImageView];
     [self.view addSubview:self.dealCaptureFilterButton];
+    [self.view addSubview:self.selcectPickerView];
+    [self addRightButton];
+    self.selcectPickerView.hidden = YES;
+    self.dealCaptureFilterButton.hidden = YES;
 //    [self addChildViewController:self.imagePickerController];
 //        self.refreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.testTableView
 //                                                                      target:self
@@ -128,6 +171,18 @@
 //    
 //        self.refreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.testTableView target:self refreshAction:@selector(refreshTriggered:) plist:@"AKTA" color:[UIColor blueColor] lineWidth:2 dropHeight:80 scale:0.7 horizontalRandomness:300 reverseLoadingAnimation:NO internalAnimationFactor:0.7];
         [self updateViewConstraintsForView ];
+}
+- (void)addRightButton{
+    self.rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
+    [_rightButton setTitle:@"翻转摄像头" forState:UIControlStateNormal];
+    _rightButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    [_rightButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithCustomView:_rightButton];
+    [[_rightButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        [self.cammera rotateCamera];
+    }];
+    self.navigationItem.rightBarButtonItem = rightBar;
+
 }
 - (void)updateViewConstraintsForView {
     @weakify(self);
@@ -163,11 +218,19 @@
         make.size.mas_equalTo(CGSizeMake(80, 50));
 
     }];
-    [self.dealCaptureFilterButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.imageView.mas_bottom).offset(20);
-        make.left.equalTo(self.dealCaptureButton.mas_right).offset(10);
-        make.size.mas_equalTo(CGSizeMake(80, 50));
+    
+
+    [self.selcectPickerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view.mas_bottom);
+        make.left.right.equalTo(self.view);
+        make.height.mas_equalTo(self.view.height/3);
     }];
+    [self.dealCaptureFilterButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.selcectPickerView.mas_top);
+        make.left.right.equalTo(self.view);
+        make.height.mas_equalTo(50);
+    }];
+
 
 }
 
@@ -189,7 +252,7 @@
 - (UIButton *)dealImageButton{
     if (!_dealImageButton) {
         _dealImageButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_dealImageButton setTitle:@"处理图像" forState:UIControlStateNormal];
+        [_dealImageButton setTitle:@"选取过滤器" forState:UIControlStateNormal];
         [_dealImageButton setTintColor:[UIColor redColor]];
         [_dealImageButton setBackgroundColor:[UIColor blueColor]];
     }
@@ -207,7 +270,7 @@
 - (UIButton *)dealCaptureFilterButton{
     if (!_dealCaptureFilterButton) {
         _dealCaptureFilterButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_dealCaptureFilterButton setTitle:@"实时处理" forState:UIControlStateNormal];
+        [_dealCaptureFilterButton setTitle:@"确定" forState:UIControlStateNormal];
         [_dealCaptureFilterButton setTintColor:[UIColor redColor]];
         [_dealCaptureFilterButton setBackgroundColor:[UIColor blueColor]];
     }
@@ -227,6 +290,16 @@
 
     }
     return _cammera;
+}
+- (UIPickerView *)selcectPickerView{
+    if (!_selcectPickerView) {
+        _selcectPickerView= [[UIPickerView alloc] init];
+        _selcectPickerView.delegate = self;
+        _selcectPickerView.dataSource = self;
+        _selcectPickerView.showsSelectionIndicator =YES;
+        _selcectPickerView.backgroundColor = [UIColor whiteColor];
+    }
+    return _selcectPickerView;
 }
 - (GPUImageView *)cameraImageView{
     if (!_cameraImageView) {
@@ -261,5 +334,30 @@
     [_selcectVC addAction:action2];
 
     return _selcectVC;
+}
+#pragma pickview datasoure
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return ((GPUimageViewModel *)self.viewModel).filterArray.count;
+}
+
+
+#pragma pickview datasoure
+-(CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
+{
+    return 30;
+}
+-(CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component{
+    return self.view.width;
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    self.title = ((GPUimageViewModel *)self.viewModel).filterArray[row];
+    self.slelectFilterIndex = row;
+    NSLog(@"xunaleni");
+}
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return ((GPUimageViewModel *)self.viewModel).filterArray[row];
 }
 @end

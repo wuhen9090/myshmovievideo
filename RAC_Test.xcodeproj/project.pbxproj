@@ -941,7 +941,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.56.mobile.video;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f3c24583-94f4-4a64-b494-2a3572ec8d53";
+				PROVISIONING_PROFILE = "66441c83-b0d9-4491-b162-32ca8adb9f87";
 				PROVISIONING_PROFILE_SPECIFIER = FiveSixMobile;
 			};
 			name = Debug;
