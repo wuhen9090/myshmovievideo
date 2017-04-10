@@ -13,8 +13,11 @@
 @property (nonatomic, strong) UIButton *dealImageButton;
 @property (nonatomic, strong) UIButton *dealCaptureButton;
 @property (nonatomic, strong) UIButton *dealCaptureFilterButton;
+@property (nonatomic, strong) UIButton *dealCaptureGroupFilterButton;
+@property (nonatomic, strong) UIButton *saveButton;
 @property (nonatomic, strong) GPUImageVideoCamera *cammera;
 @property (nonatomic, strong) GPUImageFilter *fileter;
+@property (nonatomic, strong) GPUImageFilterGroup *fileterGroup;
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) GPUImageView *cameraImageView;
 @property (nonatomic, assign) BOOL isCaoeraDeal;
@@ -84,6 +87,33 @@
         self.cameraImageView.hidden = NO;
  
     }];
+    //多重滤镜
+    [[self.dealCaptureGroupFilterButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        self.selcectPickerView.hidden = YES;
+        self.dealCaptureFilterButton.hidden = YES;
+        if (self.imageType == 1) {
+            self.imageView.hidden = NO;
+            [self.cammera stopCameraCapture];
+            RACTuple *data = [RACTuple tupleWithObjectsFromArray:@[self.imageView.image,[[NSNumber alloc] initWithInteger:self.imageType]]];
+            
+            [((GPUimageViewModel*)self.viewModel).dealCameraGroupfiltersCommand execute:data];
+        }
+        else if (self.imageType == 2)
+        {
+            [_cammera addTarget:self.fileterGroup];
+            [self.fileterGroup addTarget:self.cameraImageView];
+            self.imageView.hidden = YES;
+            RACTuple *data = [RACTuple tupleWithObjectsFromArray:@[self.cammera,self.cameraImageView,self.fileterGroup,[[NSNumber alloc] initWithInteger:self.imageType]]];
+            //给model传递参数数据并添加过滤器
+            [((GPUimageViewModel*)self.viewModel).dealCameraGroupfiltersCommand execute:data];
+        }
+
+        
+    }];
+    //存储处理结果
+    [[self.saveButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        
+    }];
     //处理摄像
     [[self.dealCaptureFilterButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(RACSignal *output) {
         self.selcectPickerView.hidden = YES;
@@ -137,22 +167,25 @@
 //
 //        }];
 //    }];
-    [RACObserve(self.cammera,cameraPosition) subscribeNext:^(id x) {
-        if (x!=AVCaptureDevicePositionUnspecified) {
-            self.rightButton.hidden = NO;
-        }else{
-            self.rightButton.hidden = YES;
-        }
-    }];
+//    [RACObserve(self.cammera,cameraPosition) subscribeNext:^(id x) {
+//        if (x!=AVCaptureDevicePositionUnspecified) {
+//            self.rightButton.hidden = NO;
+//        }else{
+//            self.rightButton.hidden = YES;
+//        }
+//    }];
 }
 - (void)initUI {
     [self.view addSubview:self.imageView];
-    [self.view addSubview:self.selectImageButton];
-    [self.view addSubview:self.dealImageButton];
-    [self.view addSubview:self.dealCaptureButton];
+  
     [self.view addSubview:self.cameraImageView];
     [self.view addSubview:self.dealCaptureFilterButton];
     [self.view addSubview:self.selcectPickerView];
+    [self.view addSubview:self.selectImageButton];
+    [self.view addSubview:self.dealImageButton];
+    [self.view addSubview:self.dealCaptureButton];
+    [self.view addSubview:self.dealCaptureGroupFilterButton];
+    [self.view addSubview:self.saveButton];
     [self addRightButton];
     self.selcectPickerView.hidden = YES;
     self.dealCaptureFilterButton.hidden = YES;
@@ -185,6 +218,7 @@
 
 }
 - (void)updateViewConstraintsForView {
+    CGFloat width = (self.view.width-40) /5;
     @weakify(self);
         [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             @strongify(self);
@@ -202,23 +236,36 @@
         [self.selectImageButton mas_makeConstraints:^(MASConstraintMaker *make) {
             @strongify(self);
             make.top.equalTo(self.imageView.mas_bottom).offset(20);
-            make.left.equalTo(self.view.mas_left).offset(10);
-            make.size.mas_equalTo(CGSizeMake(80, 50));
+            make.left.equalTo(self.view.mas_left);
+            make.size.mas_equalTo(CGSizeMake(width, 50));
         }];
         [self.dealImageButton mas_makeConstraints:^(MASConstraintMaker *make) {
             @strongify(self);
             make.top.equalTo(self.imageView.mas_bottom).offset(20);
             make.left.equalTo(self.selectImageButton.mas_right).offset(10);
-            make.size.mas_equalTo(CGSizeMake(80, 50));
+            make.size.mas_equalTo(CGSizeMake(width, 50));
         }];
     [self.dealCaptureButton mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self);
         make.top.equalTo(self.imageView.mas_bottom).offset(20);
         make.left.equalTo(self.dealImageButton.mas_right).offset(10);
-        make.size.mas_equalTo(CGSizeMake(80, 50));
+        make.size.mas_equalTo(CGSizeMake(width, 50));
 
     }];
-    
+    [self.dealCaptureGroupFilterButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        @strongify(self);
+        make.top.equalTo(self.imageView.mas_bottom).offset(20);
+        make.left.equalTo(self.dealCaptureButton.mas_right).offset(10);
+        make.size.mas_equalTo(CGSizeMake(width, 50));
+        
+    }];
+    [self.saveButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        @strongify(self);
+        make.top.equalTo(self.imageView.mas_bottom).offset(20);
+        make.right.equalTo(self.view.mas_right);
+        make.size.mas_equalTo(CGSizeMake(width, 50));
+        
+    }];
 
     [self.selcectPickerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view.mas_bottom);
@@ -244,6 +291,7 @@
     if (!_selectImageButton) {
         _selectImageButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_selectImageButton setTitle:@"选取图像" forState:UIControlStateNormal];
+        _selectImageButton.titleLabel.font = [UIFont systemFontOfSize:13];
         [_selectImageButton setTintColor:[UIColor redColor]];
         [_selectImageButton setBackgroundColor:[UIColor blueColor]];
     }
@@ -253,6 +301,8 @@
     if (!_dealImageButton) {
         _dealImageButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_dealImageButton setTitle:@"选取过滤器" forState:UIControlStateNormal];
+        _dealImageButton.titleLabel.font = [UIFont systemFontOfSize:13];
+
         [_dealImageButton setTintColor:[UIColor redColor]];
         [_dealImageButton setBackgroundColor:[UIColor blueColor]];
     }
@@ -262,6 +312,7 @@
     if (!_dealCaptureButton) {
         _dealCaptureButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_dealCaptureButton setTitle:@"摄像头" forState:UIControlStateNormal];
+        _dealCaptureButton.titleLabel.font = [UIFont systemFontOfSize:13];
         [_dealCaptureButton setTintColor:[UIColor redColor]];
         [_dealCaptureButton setBackgroundColor:[UIColor blueColor]];
     }
@@ -276,7 +327,27 @@
     }
     return _dealCaptureFilterButton;
 }
+- (UIButton *)dealCaptureGroupFilterButton{
+    if (!_dealCaptureGroupFilterButton) {
+        _dealCaptureGroupFilterButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_dealCaptureGroupFilterButton setTitle:@"多重滤镜" forState:UIControlStateNormal];
+        _dealCaptureGroupFilterButton.titleLabel.font = [UIFont systemFontOfSize:13];
+        [_dealCaptureGroupFilterButton setTintColor:[UIColor redColor]];
+        [_dealCaptureGroupFilterButton setBackgroundColor:[UIColor blueColor]];
 
+    }
+    return _dealCaptureGroupFilterButton;
+}
+- (UIButton *)saveButton{
+    if (!_saveButton) {
+        _saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_saveButton setTitle:@"保存" forState:UIControlStateNormal];
+        [_saveButton setTintColor:[UIColor redColor]];
+        [_saveButton setBackgroundColor:[UIColor blueColor]];
+        
+    }
+    return _saveButton;
+}
 - (GPUImageVideoCamera *)cammera {
     if (!_cammera) {
         self.cammera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset640x480 cameraPosition:AVCaptureDevicePositionBack];
@@ -285,6 +356,7 @@
         self.cammera.horizontallyMirrorFrontFacingCamera = NO;
         self.cammera.horizontallyMirrorRearFacingCamera = NO;
         self.fileter = [[GPUImageFilter alloc] init];
+        self.fileterGroup = [[GPUImageFilterGroup alloc] init];
         [self.cammera addTarget:self.fileter];
         [self.fileter addTarget:self.cameraImageView];
 
@@ -330,8 +402,15 @@
         }];
 
     }];
+    UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [_selcectVC dismissViewControllerAnimated:YES completion:^{
+    
+        }];
+    }];
+
     [_selcectVC addAction:action1];
     [_selcectVC addAction:action2];
+    [_selcectVC addAction:action3];
 
     return _selcectVC;
 }

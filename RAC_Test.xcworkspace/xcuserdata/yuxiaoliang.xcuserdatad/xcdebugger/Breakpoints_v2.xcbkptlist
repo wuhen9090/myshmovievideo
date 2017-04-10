@@ -42,7 +42,7 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/NetWork/RACNetWorkManager.m"
-                  timestampString = "512723184.625767"
+                  timestampString = "513500740.337658"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "46"
@@ -57,7 +57,7 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/NetWork/RACNetWorkManager.m"
-                  timestampString = "512723184.627269"
+                  timestampString = "513500740.33898"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "48"
@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RAC_Test/Class/viewModel/GPUimageViewModel.m"
-            timestampString = "512558518.146395"
+            timestampString = "513498498.331767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "-initialize"
             landmarkType = "7">
          </BreakpointContent>
@@ -296,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RAC_Test/Class/view/GPUImageViewController.m"
-            timestampString = "512723665.024951"
+            timestampString = "513500494.785449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "-bindViewModel"
             landmarkType = "7">
          </BreakpointContent>
@@ -312,11 +312,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RAC_Test/Class/view/GPUImageViewController.m"
-            timestampString = "512723665.024951"
+            timestampString = "513500494.785449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "-bindViewModel"
             landmarkType = "7">
          </BreakpointContent>
@@ -328,11 +328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RAC_Test/Class/view/GPUImageViewController.m"
-            timestampString = "512723665.024951"
+            timestampString = "513500494.785449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "-bindViewModel"
             landmarkType = "7">
          </BreakpointContent>
@@ -344,12 +344,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RAC_Test/Class/viewModel/GPUimageViewModel.m"
-            timestampString = "512722499.769704"
+            timestampString = "513500740.180023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
             endingLineNumber = "43"
             landmarkName = "-initialize"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RAC_Test/Class/viewModel/GPUimageViewModel.m"
+            timestampString = "513500740.180023"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-initialize"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RAC_Test/Class/viewModel/GPUimageViewModel.m"
+            timestampString = "513500740.180023"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-initialize"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RAC_Test/Class/view/GPUImageViewController.m"
+            timestampString = "513500494.785449"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "-bindViewModel"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
