@@ -19,6 +19,13 @@
 		E515001F1E8A6EF9001F0DEA /* AKTA.plist in Resources */ = {isa = PBXBuildFile; fileRef = E515001E1E8A6EF9001F0DEA /* AKTA.plist */; };
 		E51500211E8A7D6A001F0DEA /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = E51500201E8A7D6A001F0DEA /* storehouse.plist */; };
 		E52543711E83B86300EE244C /* firstViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E52543701E83B86300EE244C /* firstViewModel.m */; };
+		E5594E781EA7124600EC5D9A /* VideoEditModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5594E771EA7124600EC5D9A /* VideoEditModel.m */; };
+		E5594E7B1EA712A600EC5D9A /* VideoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5594E7A1EA712A600EC5D9A /* VideoEditViewController.m */; };
+		E5594E851EA7478700EC5D9A /* ICGRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5594E7F1EA7478700EC5D9A /* ICGRulerView.m */; };
+		E5594E861EA7478700EC5D9A /* ICGThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5594E811EA7478700EC5D9A /* ICGThumbView.m */; };
+		E5594E871EA7478700EC5D9A /* ICGVideoTrimmerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5594E841EA7478700EC5D9A /* ICGVideoTrimmerView.m */; };
+		E5594E891EA7645C00EC5D9A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5594E881EA7645C00EC5D9A /* AVFoundation.framework */; };
+		E5594E8B1EA7646300EC5D9A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5594E8A1EA7646300EC5D9A /* MobileCoreServices.framework */; };
 		E56E71A21E713964006D0D25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E71A11E713964006D0D25 /* main.m */; };
 		E56E71A51E713964006D0D25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E71A41E713964006D0D25 /* AppDelegate.m */; };
 		E56E71AB1E713964006D0D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56E71A91E713964006D0D25 /* Main.storyboard */; };
@@ -35,6 +42,7 @@
 		E5D177F81E82900A0091D812 /* newGuide1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D177F71E82900A0091D812 /* newGuide1-1.png */; };
 		E5D177FA1E8291780091D812 /* 56logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D177F91E8291780091D812 /* 56logo.png */; };
 		E5D177FE1E83A68D0091D812 /* RACNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D177FD1E83A68D0091D812 /* RACNetWorkManager.m */; };
+		E5EF50B61E9B8F780008B0AF /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5EF50B51E9B8F780008B0AF /* Photos.framework */; };
 		E5F666771E8B65960007304B /* RACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666761E8B65960007304B /* RACViewController.m */; };
 		E5F6667A1E8B65CA0007304B /* RACViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F666791E8B65CA0007304B /* RACViewModel.m */; };
 		E5F666A81E8B68A60007304B /* MRCSegmentedControlViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F6669C1E8B68A60007304B /* MRCSegmentedControlViewModel.m */; };
@@ -94,6 +102,19 @@
 		E51500201E8A7D6A001F0DEA /* storehouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = storehouse.plist; sourceTree = "<group>"; };
 		E525436F1E83B86300EE244C /* firstViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = firstViewModel.h; path = ../firstViewModel.h; sourceTree = "<group>"; };
 		E52543701E83B86300EE244C /* firstViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = firstViewModel.m; path = ../firstViewModel.m; sourceTree = "<group>"; };
+		E5594E761EA7124600EC5D9A /* VideoEditModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoEditModel.h; sourceTree = "<group>"; };
+		E5594E771EA7124600EC5D9A /* VideoEditModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoEditModel.m; sourceTree = "<group>"; };
+		E5594E791EA712A600EC5D9A /* VideoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoEditViewController.h; sourceTree = "<group>"; };
+		E5594E7A1EA712A600EC5D9A /* VideoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoEditViewController.m; sourceTree = "<group>"; };
+		E5594E7E1EA7478700EC5D9A /* ICGRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGRulerView.h; sourceTree = "<group>"; };
+		E5594E7F1EA7478700EC5D9A /* ICGRulerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGRulerView.m; sourceTree = "<group>"; };
+		E5594E801EA7478700EC5D9A /* ICGThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGThumbView.h; sourceTree = "<group>"; };
+		E5594E811EA7478700EC5D9A /* ICGThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGThumbView.m; sourceTree = "<group>"; };
+		E5594E821EA7478700EC5D9A /* ICGVideoTrimmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGVideoTrimmer.h; sourceTree = "<group>"; };
+		E5594E831EA7478700EC5D9A /* ICGVideoTrimmerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGVideoTrimmerView.h; sourceTree = "<group>"; };
+		E5594E841EA7478700EC5D9A /* ICGVideoTrimmerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGVideoTrimmerView.m; sourceTree = "<group>"; };
+		E5594E881EA7645C00EC5D9A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E5594E8A1EA7646300EC5D9A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		E56E719D1E713964006D0D25 /* RAC_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAC_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56E71A11E713964006D0D25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E56E71A31E713964006D0D25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +144,7 @@
 		E5D177F91E8291780091D812 /* 56logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 56logo.png; sourceTree = "<group>"; };
 		E5D177FC1E83A68D0091D812 /* RACNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACNetWorkManager.h; sourceTree = "<group>"; };
 		E5D177FD1E83A68D0091D812 /* RACNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACNetWorkManager.m; sourceTree = "<group>"; };
+		E5EF50B51E9B8F780008B0AF /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		E5F666751E8B65960007304B /* RACViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACViewController.h; sourceTree = "<group>"; };
 		E5F666761E8B65960007304B /* RACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACViewController.m; sourceTree = "<group>"; };
 		E5F666781E8B65CA0007304B /* RACViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACViewModel.h; sourceTree = "<group>"; };
@@ -174,6 +196,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5594E8B1EA7646300EC5D9A /* MobileCoreServices.framework in Frameworks */,
+				E5594E891EA7645C00EC5D9A /* AVFoundation.framework in Frameworks */,
+				E5EF50B61E9B8F780008B0AF /* Photos.framework in Frameworks */,
 				11350291D24A71848086149B /* Pods_RAC_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +225,9 @@
 		C77A0D6994F82AAE056A337F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E5594E8A1EA7646300EC5D9A /* MobileCoreServices.framework */,
+				E5594E881EA7645C00EC5D9A /* AVFoundation.framework */,
+				E5EF50B51E9B8F780008B0AF /* Photos.framework */,
 				F62EF0D3A7E9414FA6B0DFB2 /* Pods_RAC_Test.framework */,
 				69449DAD6BE869988F3B7996 /* Pods_RAC_TestTests.framework */,
 				25E7C81EBC1633D2901EBC3B /* Pods_RAC_TestUITests.framework */,
@@ -250,6 +278,28 @@
 				E515000B1E8A6159001F0DEA /* CBStoreHouseRefreshControl */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		E5594E7C1EA7478700EC5D9A /* ThirdFile */ = {
+			isa = PBXGroup;
+			children = (
+				E5594E7D1EA7478700EC5D9A /* TrimmerView */,
+			);
+			path = ThirdFile;
+			sourceTree = "<group>";
+		};
+		E5594E7D1EA7478700EC5D9A /* TrimmerView */ = {
+			isa = PBXGroup;
+			children = (
+				E5594E7E1EA7478700EC5D9A /* ICGRulerView.h */,
+				E5594E7F1EA7478700EC5D9A /* ICGRulerView.m */,
+				E5594E801EA7478700EC5D9A /* ICGThumbView.h */,
+				E5594E811EA7478700EC5D9A /* ICGThumbView.m */,
+				E5594E821EA7478700EC5D9A /* ICGVideoTrimmer.h */,
+				E5594E831EA7478700EC5D9A /* ICGVideoTrimmerView.h */,
+				E5594E841EA7478700EC5D9A /* ICGVideoTrimmerView.m */,
+			);
+			path = TrimmerView;
 			sourceTree = "<group>";
 		};
 		E56E71941E713964006D0D25 = {
@@ -378,6 +428,8 @@
 				E58624AD1E8CB8B700684D31 /* GPUImageViewController.m */,
 				E58624B31E8CBFB700684D31 /* ViewController.h */,
 				E58624B41E8CBFB700684D31 /* ViewController.m */,
+				E5594E791EA712A600EC5D9A /* VideoEditViewController.h */,
+				E5594E7A1EA712A600EC5D9A /* VideoEditViewController.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -392,6 +444,8 @@
 				E58624AA1E8CB80700684D31 /* GPUimageViewModel.m */,
 				E525436F1E83B86300EE244C /* firstViewModel.h */,
 				E52543701E83B86300EE244C /* firstViewModel.m */,
+				E5594E761EA7124600EC5D9A /* VideoEditModel.h */,
+				E5594E771EA7124600EC5D9A /* VideoEditModel.m */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -420,6 +474,7 @@
 		E5F666AE1E8B69520007304B /* Gloable */ = {
 			isa = PBXGroup;
 			children = (
+				E5594E7C1EA7478700EC5D9A /* ThirdFile */,
 				E5F666B01E8B6B4A0007304B /* MRCRouter.h */,
 				E5F666B11E8B6B4A0007304B /* MRCRouter.m */,
 				E5F666AF1E8B696C0007304B /* GloabelDefine.h */,
@@ -761,6 +816,7 @@
 				E5F666B61E8B6C380007304B /* MRCViewControllerAnimatedTransition.m in Sources */,
 				E5F666CC1E8B8E980007304B /* MRCNavigationControllerStack.m in Sources */,
 				E5D177FE1E83A68D0091D812 /* RACNetWorkManager.m in Sources */,
+				E5594E781EA7124600EC5D9A /* VideoEditModel.m in Sources */,
 				E5F666AC1E8B68A60007304B /* MRCViewModelServicesImpl.m in Sources */,
 				E58624B21E8CBED300684D31 /* MyTableViewCell.m in Sources */,
 				E5F6667A1E8B65CA0007304B /* RACViewModel.m in Sources */,
@@ -769,15 +825,19 @@
 				E5F666A81E8B68A60007304B /* MRCSegmentedControlViewModel.m in Sources */,
 				E5F666AB1E8B68A60007304B /* MRCViewModel.m in Sources */,
 				E56E71A51E713964006D0D25 /* AppDelegate.m in Sources */,
+				E5594E7B1EA712A600EC5D9A /* VideoEditViewController.m in Sources */,
 				E56E71A21E713964006D0D25 /* main.m in Sources */,
+				E5594E871EA7478700EC5D9A /* ICGVideoTrimmerView.m in Sources */,
 				E51500141E8A6159001F0DEA /* CBStoreHouseRefreshControl.m in Sources */,
 				E5F666A91E8B68A60007304B /* MRCTabBarViewModel.m in Sources */,
 				E51500131E8A6159001F0DEA /* BarItem.m in Sources */,
 				E5F666D41E8B8E980007304B /* UISearchBar+MRCShowsCancelButton.m in Sources */,
 				E5F666771E8B65960007304B /* RACViewController.m in Sources */,
+				E5594E851EA7478700EC5D9A /* ICGRulerView.m in Sources */,
 				E5F666AD1E8B68A60007304B /* MRCWebViewModel.m in Sources */,
 				E5F666AA1E8B68A60007304B /* MRCTableViewModel.m in Sources */,
 				E51500161E8A6159001F0DEA /* README.md in Sources */,
+				E5594E861EA7478700EC5D9A /* ICGThumbView.m in Sources */,
 				E58624B51E8CBFB700684D31 /* ViewController.m in Sources */,
 				E5F666B21E8B6B4A0007304B /* MRCRouter.m in Sources */,
 				E5F666D31E8B8E980007304B /* UINavigationItem+MRCBackBarButtonItem.m in Sources */,

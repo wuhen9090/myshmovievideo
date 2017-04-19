@@ -28,6 +28,9 @@
 @property (nonatomic, strong) UIButton *rightButton;
 @property (nonatomic, assign) NSInteger slelectFilterIndex;
 @property (nonatomic, assign) NSInteger imageType;
+@property (nonatomic, strong) UIImage *orientImage;
+@property (nonatomic, strong) GPUImageMovieWriter *moveWriter;
+
 @end
 
 @implementation GPUImageViewController
@@ -57,8 +60,8 @@
             
         }];
         
-        UIImage *image = [tuple.second objectForKey:UIImagePickerControllerOriginalImage];
-        self.imageView.image = image;
+        self.orientImage = [tuple.second objectForKey:UIImagePickerControllerOriginalImage];
+        self.imageView.image = self.orientImage;
         self.imageType = 1;
         [self.cammera stopCameraCapture];
         self.cameraImageView.hidden = YES;
@@ -78,6 +81,7 @@
 //    }];
     //显示处理过得图像
     RAC(self.imageView,image) = ((GPUimageViewModel*)self.viewModel).dealImageCommand.executionSignals.switchToLatest;
+//    RAC(self.imageView,image) = ((GPUimageViewModel*)self.viewModel).dealCameraGroupfiltersCommand.executionSignals.switchToLatest;
     
     [[self.dealCaptureButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         self.imageView.hidden = YES;
@@ -94,9 +98,9 @@
         if (self.imageType == 1) {
             self.imageView.hidden = NO;
             [self.cammera stopCameraCapture];
-            RACTuple *data = [RACTuple tupleWithObjectsFromArray:@[self.imageView.image,[[NSNumber alloc] initWithInteger:self.imageType]]];
+            RACTuple *data = [RACTuple tupleWithObjectsFromArray:@[self.orientImage,[[NSNumber alloc] initWithInteger:self.imageType],[[NSNumber alloc] initWithInteger:self.imageType]]];
             
-            [((GPUimageViewModel*)self.viewModel).dealCameraGroupfiltersCommand execute:data];
+            [((GPUimageViewModel*)self.viewModel).dealImageCommand execute:data];
         }
         else if (self.imageType == 2)
         {
@@ -113,6 +117,21 @@
     //存储处理结果
     [[self.saveButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         
+        if (self.imageType == 1) {
+            self.imageView.hidden = NO;
+            [self.cammera stopCameraCapture];
+            RACTuple *data = [RACTuple tupleWithObjectsFromArray:@[self.orientImage,[[NSNumber alloc] initWithInteger:self.slelectFilterIndex]]];
+            
+            [((GPUimageViewModel*)self.viewModel).dealImageCommand execute:data];
+        }
+        else if (self.imageType == 2)
+        {
+            self.imageView.hidden = YES;
+            RACTuple *data = [RACTuple tupleWithObjectsFromArray:@[self.cammera,self.cameraImageView,self.fileter,[[NSNumber alloc] initWithInteger:self.imageType]]];
+            //给model传递参数数据并添加过滤器
+            [((GPUimageViewModel*)self.viewModel).dealSaveCommand execute:data];
+        }
+
     }];
     //处理摄像
     [[self.dealCaptureFilterButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(RACSignal *output) {
@@ -121,7 +140,7 @@
         if (self.imageType == 1) {
             self.imageView.hidden = NO;
             [self.cammera stopCameraCapture];
-            RACTuple *data = [RACTuple tupleWithObjectsFromArray:@[self.imageView.image,[[NSNumber alloc] initWithInteger:self.slelectFilterIndex]]];
+            RACTuple *data = [RACTuple tupleWithObjectsFromArray:@[self.orientImage,[[NSNumber alloc] initWithInteger:self.slelectFilterIndex]]];
 
             [((GPUimageViewModel*)self.viewModel).dealImageCommand execute:data];
         }
@@ -311,7 +330,7 @@
 - (UIButton *)dealCaptureButton{
     if (!_dealCaptureButton) {
         _dealCaptureButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_dealCaptureButton setTitle:@"摄像头" forState:UIControlStateNormal];
+        [_dealCaptureButton setTitle:@"开始摄像" forState:UIControlStateNormal];
         _dealCaptureButton.titleLabel.font = [UIFont systemFontOfSize:13];
         [_dealCaptureButton setTintColor:[UIColor redColor]];
         [_dealCaptureButton setBackgroundColor:[UIColor blueColor]];
@@ -355,13 +374,30 @@
         self.cammera.audioEncodingTarget = nil;
         self.cammera.horizontallyMirrorFrontFacingCamera = NO;
         self.cammera.horizontallyMirrorRearFacingCamera = NO;
+        [self.cammera addAudioInputsAndOutputs]; //防止允许声音通过的情况下第一帧黑屏
         self.fileter = [[GPUImageFilter alloc] init];
         self.fileterGroup = [[GPUImageFilterGroup alloc] init];
+//        [self.fileter addTarget:self.moveWriter];
         [self.cammera addTarget:self.fileter];
         [self.fileter addTarget:self.cameraImageView];
 
     }
     return _cammera;
+}
+- (GPUImageMovieWriter *)moveWriter{
+    if (!_moveWriter) {
+        //设置存储路径
+        NSString *path = [NSTemporaryDirectory()stringByAppendingPathComponent:@"move.m4v"];
+        unlink([path UTF8String]);
+        NSURL *willSaveUrl = [NSURL fileURLWithPath:path];
+
+        _moveWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:willSaveUrl size:CGSizeMake(480, 640)];
+        _moveWriter.encodingLiveVideo = YES;
+        _moveWriter.shouldPassthroughAudio = YES;
+        _moveWriter.hasAudioTrack = YES;
+
+    }
+    return _moveWriter;
 }
 - (UIPickerView *)selcectPickerView{
     if (!_selcectPickerView) {

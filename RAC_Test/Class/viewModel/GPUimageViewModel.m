@@ -7,8 +7,11 @@
 //
 
 #import "GPUimageViewModel.h"
+#import <Photos/Photos.h>
 @interface GPUimageViewModel()
 @property (nonatomic, strong)GPUImageFilterGroup *filterGroup;
+@property (nonatomic, strong)GPUImageMovieWriter *moveWriter;
+@property (nonatomic, strong)NSURL *movePath;
 @end
 @implementation GPUimageViewModel
 - (instancetype)initWithServices:(id<MRCViewModelServices>)services params:(NSDictionary *)params {
@@ -39,25 +42,73 @@
         return alertSignal;
     }];
     self.dealImageCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(RACTuple *inputData) {
-        UIImage *imageView = (UIImage *)inputData.first;
-        NSInteger filterIndex = [inputData.last integerValue];
+        if (inputData.count == 3) {//多重滤镜
+            UIImage *imageView = (UIImage *)inputData.first;
+            GPUImageFilterGroup *filergroup = [[GPUImageFilterGroup alloc] init];
+            filergroup = [self randFiltersGroup:filergroup];
+            
+            //设置要渲染的区域
+            [filergroup forceProcessingAtSize:imageView.size];
+            [filergroup useNextFrameForImageCapture];
+            
+            //获取数据源
+            GPUImagePicture *stillImageSource = [[GPUImagePicture alloc]initWithImage:imageView smoothlyScaleOutput:YES];
+            
+            //添加上滤镜
+            [stillImageSource addTarget:filergroup];
+            //开始渲染
+            [stillImageSource processImage];
+            //获取渲染后的图片
+            UIImage *newImage = [filergroup imageFromCurrentFramebuffer];
+            return [RACSignal return:newImage];
 
-        GPUImageFilter *filer = [self getFileterForImageFromIndex:filterIndex];
-        //设置要渲染的区域
-        [filer forceProcessingAtSize:imageView.size];
-        [filer useNextFrameForImageCapture];
-        
-        //获取数据源
-        GPUImagePicture *stillImageSource = [[GPUImagePicture alloc]initWithImage:imageView];
-        
-        //添加上滤镜
-        [stillImageSource addTarget:filer];
-        //开始渲染
-        [stillImageSource processImage];
-        //获取渲染后的图片
-        UIImage *newImage = [filer imageFromCurrentFramebuffer];
-        
-        return [RACSignal return:newImage];
+        }else{
+            UIImage *imageView = (UIImage *)inputData.first;
+            NSInteger filterIndex = [inputData.last integerValue];
+
+            GPUImageFilter *filer = [self getFileterForImageFromIndex:filterIndex];
+            //设置要渲染的区域
+            [filer forceProcessingAtSize:imageView.size];
+            [filer useNextFrameForImageCapture];
+            
+            //获取数据源
+            GPUImagePicture *stillImageSource = [[GPUImagePicture alloc]initWithImage:imageView];
+            
+            //添加上滤镜
+            [stillImageSource addTarget:filer];
+            //开始渲染
+            [stillImageSource processImage];
+            //获取渲染后的图片
+            UIImage *newImage = [filer imageFromCurrentFramebuffer];
+            
+            return [RACSignal return:newImage];
+        }
+    }];
+    //保存图像或者视频
+    self.dealSaveCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(RACTuple *tuple) {
+        NSInteger type = [tuple.last integerValue];
+        if (type == 1) {
+            UIImage *imageView = (UIImage *)tuple.first;
+            UIImageWriteToSavedPhotosAlbum(imageView, self, nil, nil);
+        }else{
+            UIImage *imageView = (UIImage *)tuple.first;
+            GPUImageFilter *filergroup =tuple.third;
+            GPUImageVideoCamera *camera = tuple.first;
+            [filergroup removeAllTargets];
+            camera.audioEncodingTarget = nil;
+            [self.moveWriter finishRecording];
+            
+            
+            [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+                [PHAssetCreationRequest creationRequestForAssetFromVideoAtFileURL:self.movePath];
+            } completionHandler:^(BOOL success, NSError * _Nullable error) {
+                
+            }];
+
+            return [RACSignal return:camera];
+        }
+        return [RACSignal empty];
+
     }];
     //多重滤镜问题
     self.dealCameraGroupfiltersCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(RACTuple *tuple) {
@@ -74,29 +125,7 @@
             return [RACSignal return:camera];
         }
         else{
-            UIImage *imageView = (UIImage *)tuple.first;
-            GPUImageFilterGroup *filergroup = [[GPUImageFilterGroup alloc] init];
-            filergroup = [self randFiltersGroup:filergroup];
-            //设置要渲染的区域
-//            [filergroup forceProcessingAtSize:imageView.size];
-            [filergroup useNextFrameForImageCapture];
-            
-            //获取数据源
-            GPUImagePicture *stillImageSource = [[GPUImagePicture alloc]initWithImage:imageView smoothlyScaleOutput:YES];
-            
-            //添加上滤镜
-            [stillImageSource addTarget:filergroup];
-            //开始渲染
-            [stillImageSource processImage];
-            //获取渲染后的图片
-            UIImage *newImage = [filergroup imageFromCurrentFramebuffer];
-            return [RACSignal return:newImage];
-
-//            imageView = [filergroup imageFromCurrentFramebuffer];
-//            return [RACSignal empty];
-
-            
-
+            return [RACSignal empty];
         }
         return [RACSignal empty];
 
@@ -107,11 +136,21 @@
             GPUImageVideoCamera *camera = (GPUImageVideoCamera *)tuple.first;
             GPUImageView *imageView = (GPUImageView *)tuple.second;
             GPUImageFilter *filer = (GPUImageFilter *)tuple.third;
+//            GPUImageMovieWriter *writer = (GPUImageMovieWriter *)tuple.fourth;
             [filer removeAllTargets];
             [camera removeAllTargets];
             filer =[self getFileterForImageFromIndex:filterIndex];
+            [filer addTarget:self.moveWriter];
             [filer addTarget:imageView];
             [camera addTarget:filer];
+            
+            double delaytime = 0.5;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delaytime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                NSLog(@"开始录制");
+                camera.audioEncodingTarget = self.moveWriter;
+                [self.moveWriter startRecording];
+            });
+
             return [RACSignal return:camera];
         }
         return [RACSignal empty];
@@ -259,6 +298,21 @@
         filterGroup.initialFilters = @[initialFilters[0]];
         filterGroup.terminalFilter = newTerminalFilter;
     }
+}
+- (GPUImageMovieWriter *)moveWriter{
+    if (!_moveWriter) {
+        //设置存储路径
+        NSString *path = [NSTemporaryDirectory()stringByAppendingPathComponent:@"move.m4v"];
+        unlink([path UTF8String]);
+        NSURL *willSaveUrl = [NSURL fileURLWithPath:path];
+        self.movePath = willSaveUrl;
+        _moveWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:willSaveUrl size:CGSizeMake(480, 640)];
+        _moveWriter.encodingLiveVideo = YES;
+        _moveWriter.shouldPassthroughAudio = YES;
+        _moveWriter.hasAudioTrack = YES;
+        
+    }
+    return _moveWriter;
 }
 
 @end

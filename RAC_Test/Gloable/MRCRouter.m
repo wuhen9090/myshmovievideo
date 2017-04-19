@@ -39,7 +39,7 @@
     	@"firstViewModel": @"ViewController",
         @"RACViewModel": @"RACViewController",
         @"GPUimageViewModel": @"GPUImageViewController",
-        @"MRCWebViewModel": @"MRCWebViewController",
+        @"VideoEditModel": @"VideoEditViewController",
         @"MRCRepoReadmeViewModel": @"MRCRepoReadmeController",
         @"MRCSelectBranchOrTagViewModel": @"MRCSelectBranchOrTagViewController",
         @"MRCGitTreeViewModel": @"MRCGitTreeViewController",

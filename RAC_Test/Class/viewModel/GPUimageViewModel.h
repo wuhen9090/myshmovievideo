@@ -13,6 +13,8 @@
 @property (nonatomic, strong) RACCommand *dealImageCommand ;
 @property (nonatomic, strong) RACCommand *dealCameraCommand ;
 @property (nonatomic, strong) RACCommand *dealCameraGroupfiltersCommand ;
+@property (nonatomic, strong) RACCommand *dealSaveCommand ;
+
 
 @property (nonatomic, strong) NSArray    *filterArray ;
 @end
