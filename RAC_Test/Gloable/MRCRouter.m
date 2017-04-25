@@ -40,7 +40,7 @@
         @"RACViewModel": @"RACViewController",
         @"GPUimageViewModel": @"GPUImageViewController",
         @"VideoEditModel": @"VideoEditViewController",
-        @"MRCRepoReadmeViewModel": @"MRCRepoReadmeController",
+        @"CalculationViewModel": @"AutomaticCalculationCellHeightViewController",
         @"MRCSelectBranchOrTagViewModel": @"MRCSelectBranchOrTagViewController",
         @"MRCGitTreeViewModel": @"MRCGitTreeViewController",
         @"MRCSourceEditorViewModel": @"MRCSourceEditorViewController",

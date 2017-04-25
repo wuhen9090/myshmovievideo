@@ -26,6 +26,10 @@
 		E5594E871EA7478700EC5D9A /* ICGVideoTrimmerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5594E841EA7478700EC5D9A /* ICGVideoTrimmerView.m */; };
 		E5594E891EA7645C00EC5D9A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5594E881EA7645C00EC5D9A /* AVFoundation.framework */; };
 		E5594E8B1EA7646300EC5D9A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5594E8A1EA7646300EC5D9A /* MobileCoreServices.framework */; };
+		E56615DB1EAF25E00004ED49 /* HYBCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E56615DA1EAF25E00004ED49 /* HYBCommentCell.m */; };
+		E56615E11EAF2B120004ED49 /* UITableView+HYBCacheHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = E56615DE1EAF2B120004ED49 /* UITableView+HYBCacheHeight.m */; };
+		E56615E21EAF2B120004ED49 /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = E56615E01EAF2B120004ED49 /* UITableViewCell+HYBMasonryAutoCellHeight.m */; };
+		E56615E51EAF2E6E0004ED49 /* CalculationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E56615E41EAF2E6E0004ED49 /* CalculationViewModel.m */; };
 		E56E71A21E713964006D0D25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E71A11E713964006D0D25 /* main.m */; };
 		E56E71A51E713964006D0D25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E56E71A41E713964006D0D25 /* AppDelegate.m */; };
 		E56E71AB1E713964006D0D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56E71A91E713964006D0D25 /* Main.storyboard */; };
@@ -37,6 +41,10 @@
 		E58624AE1E8CB8B700684D31 /* GPUImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E58624AD1E8CB8B700684D31 /* GPUImageViewController.m */; };
 		E58624B21E8CBED300684D31 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E58624B11E8CBED300684D31 /* MyTableViewCell.m */; };
 		E58624B51E8CBFB700684D31 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E58624B41E8CBFB700684D31 /* ViewController.m */; };
+		E598AE891EAF23150007B968 /* AutomaticCalculationCellHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AE881EAF23150007B968 /* AutomaticCalculationCellHeightViewController.m */; };
+		E598AE941EAF252B0007B968 /* HYBCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AE8E1EAF252B0007B968 /* HYBCommentModel.m */; };
+		E598AE961EAF252B0007B968 /* HYBTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AE921EAF252B0007B968 /* HYBTestModel.m */; };
+		E598AE9C1EAF25590007B968 /* HYBTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E598AE9B1EAF25590007B968 /* HYBTestCell.m */; };
 		E5D177F41E827A3F0091D812 /* man.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5D177F21E827A3F0091D812 /* man.jpg */; };
 		E5D177F51E827A3F0091D812 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D177F31E827A3F0091D812 /* person.png */; };
 		E5D177F81E82900A0091D812 /* newGuide1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D177F71E82900A0091D812 /* newGuide1-1.png */; };
@@ -115,6 +123,14 @@
 		E5594E841EA7478700EC5D9A /* ICGVideoTrimmerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGVideoTrimmerView.m; sourceTree = "<group>"; };
 		E5594E881EA7645C00EC5D9A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E5594E8A1EA7646300EC5D9A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E56615D91EAF25E00004ED49 /* HYBCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBCommentCell.h; sourceTree = "<group>"; };
+		E56615DA1EAF25E00004ED49 /* HYBCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBCommentCell.m; sourceTree = "<group>"; };
+		E56615DD1EAF2B120004ED49 /* UITableView+HYBCacheHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+HYBCacheHeight.h"; sourceTree = "<group>"; };
+		E56615DE1EAF2B120004ED49 /* UITableView+HYBCacheHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HYBCacheHeight.m"; sourceTree = "<group>"; };
+		E56615DF1EAF2B120004ED49 /* UITableViewCell+HYBMasonryAutoCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+HYBMasonryAutoCellHeight.h"; sourceTree = "<group>"; };
+		E56615E01EAF2B120004ED49 /* UITableViewCell+HYBMasonryAutoCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+HYBMasonryAutoCellHeight.m"; sourceTree = "<group>"; };
+		E56615E31EAF2E6E0004ED49 /* CalculationViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculationViewModel.h; sourceTree = "<group>"; };
+		E56615E41EAF2E6E0004ED49 /* CalculationViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculationViewModel.m; sourceTree = "<group>"; };
 		E56E719D1E713964006D0D25 /* RAC_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAC_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56E71A11E713964006D0D25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E56E71A31E713964006D0D25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -136,6 +152,14 @@
 		E58624B11E8CBED300684D31 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 		E58624B31E8CBFB700684D31 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E58624B41E8CBFB700684D31 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E598AE871EAF23150007B968 /* AutomaticCalculationCellHeightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutomaticCalculationCellHeightViewController.h; sourceTree = "<group>"; };
+		E598AE881EAF23150007B968 /* AutomaticCalculationCellHeightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutomaticCalculationCellHeightViewController.m; sourceTree = "<group>"; };
+		E598AE8D1EAF252B0007B968 /* HYBCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBCommentModel.h; sourceTree = "<group>"; };
+		E598AE8E1EAF252B0007B968 /* HYBCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBCommentModel.m; sourceTree = "<group>"; };
+		E598AE911EAF252B0007B968 /* HYBTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBTestModel.h; sourceTree = "<group>"; };
+		E598AE921EAF252B0007B968 /* HYBTestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBTestModel.m; sourceTree = "<group>"; };
+		E598AE9A1EAF25590007B968 /* HYBTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBTestCell.h; sourceTree = "<group>"; };
+		E598AE9B1EAF25590007B968 /* HYBTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBTestCell.m; sourceTree = "<group>"; };
 		E5D177E81E8272B10091D812 /* RAC_Test-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RAC_Test-prefix.pch"; sourceTree = "<group>"; };
 		E5D177F21E827A3F0091D812 /* man.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = man.jpg; sourceTree = "<group>"; };
 		E5D177F31E827A3F0091D812 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
@@ -302,6 +326,17 @@
 			path = TrimmerView;
 			sourceTree = "<group>";
 		};
+		E56615DC1EAF2B120004ED49 /* HYBMasonryAutoCellHeight */ = {
+			isa = PBXGroup;
+			children = (
+				E56615DD1EAF2B120004ED49 /* UITableView+HYBCacheHeight.h */,
+				E56615DE1EAF2B120004ED49 /* UITableView+HYBCacheHeight.m */,
+				E56615DF1EAF2B120004ED49 /* UITableViewCell+HYBMasonryAutoCellHeight.h */,
+				E56615E01EAF2B120004ED49 /* UITableViewCell+HYBMasonryAutoCellHeight.m */,
+			);
+			path = HYBMasonryAutoCellHeight;
+			sourceTree = "<group>";
+		};
 		E56E71941E713964006D0D25 = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +370,7 @@
 				E56E71AE1E713964006D0D25 /* LaunchScreen.storyboard */,
 				E56E71B11E713964006D0D25 /* Info.plist */,
 				E525436E1E83B84800EE244C /* Class */,
+				E56615DC1EAF2B120004ED49 /* HYBMasonryAutoCellHeight */,
 				E5D177FB1E83A63D0091D812 /* NetWork */,
 				E5F666AE1E8B69520007304B /* Gloable */,
 				E56E71A01E713964006D0D25 /* Supporting Files */,
@@ -372,10 +408,25 @@
 		E58624AF1E8CBEA700684D31 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				E598AE9A1EAF25590007B968 /* HYBTestCell.h */,
+				E598AE9B1EAF25590007B968 /* HYBTestCell.m */,
+				E56615D91EAF25E00004ED49 /* HYBCommentCell.h */,
+				E56615DA1EAF25E00004ED49 /* HYBCommentCell.m */,
 				E58624B01E8CBED300684D31 /* MyTableViewCell.h */,
 				E58624B11E8CBED300684D31 /* MyTableViewCell.m */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		E598AE8A1EAF252B0007B968 /* AutomaticCalculationModel */ = {
+			isa = PBXGroup;
+			children = (
+				E598AE8D1EAF252B0007B968 /* HYBCommentModel.h */,
+				E598AE8E1EAF252B0007B968 /* HYBCommentModel.m */,
+				E598AE911EAF252B0007B968 /* HYBTestModel.h */,
+				E598AE921EAF252B0007B968 /* HYBTestModel.m */,
+			);
+			path = AutomaticCalculationModel;
 			sourceTree = "<group>";
 		};
 		E5D177F01E827A3F0091D812 /* Resource */ = {
@@ -413,6 +464,7 @@
 		E5F666721E8B60FA0007304B /* model */ = {
 			isa = PBXGroup;
 			children = (
+				E598AE8A1EAF252B0007B968 /* AutomaticCalculationModel */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -430,6 +482,8 @@
 				E58624B41E8CBFB700684D31 /* ViewController.m */,
 				E5594E791EA712A600EC5D9A /* VideoEditViewController.h */,
 				E5594E7A1EA712A600EC5D9A /* VideoEditViewController.m */,
+				E598AE871EAF23150007B968 /* AutomaticCalculationCellHeightViewController.h */,
+				E598AE881EAF23150007B968 /* AutomaticCalculationCellHeightViewController.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -446,6 +500,8 @@
 				E52543701E83B86300EE244C /* firstViewModel.m */,
 				E5594E761EA7124600EC5D9A /* VideoEditModel.h */,
 				E5594E771EA7124600EC5D9A /* VideoEditModel.m */,
+				E56615E31EAF2E6E0004ED49 /* CalculationViewModel.h */,
+				E56615E41EAF2E6E0004ED49 /* CalculationViewModel.m */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -814,6 +870,7 @@
 				E58624AE1E8CB8B700684D31 /* GPUImageViewController.m in Sources */,
 				E5F666CE1E8B8E980007304B /* MRCTabBarController.m in Sources */,
 				E5F666B61E8B6C380007304B /* MRCViewControllerAnimatedTransition.m in Sources */,
+				E598AE9C1EAF25590007B968 /* HYBTestCell.m in Sources */,
 				E5F666CC1E8B8E980007304B /* MRCNavigationControllerStack.m in Sources */,
 				E5D177FE1E83A68D0091D812 /* RACNetWorkManager.m in Sources */,
 				E5594E781EA7124600EC5D9A /* VideoEditModel.m in Sources */,
@@ -822,6 +879,7 @@
 				E5F6667A1E8B65CA0007304B /* RACViewModel.m in Sources */,
 				E5F666CF1E8B8E980007304B /* MRCTableViewController.m in Sources */,
 				E5F666D11E8B8E980007304B /* MRCWebViewController.m in Sources */,
+				E598AE961EAF252B0007B968 /* HYBTestModel.m in Sources */,
 				E5F666A81E8B68A60007304B /* MRCSegmentedControlViewModel.m in Sources */,
 				E5F666AB1E8B68A60007304B /* MRCViewModel.m in Sources */,
 				E56E71A51E713964006D0D25 /* AppDelegate.m in Sources */,
@@ -832,18 +890,24 @@
 				E5F666A91E8B68A60007304B /* MRCTabBarViewModel.m in Sources */,
 				E51500131E8A6159001F0DEA /* BarItem.m in Sources */,
 				E5F666D41E8B8E980007304B /* UISearchBar+MRCShowsCancelButton.m in Sources */,
+				E56615DB1EAF25E00004ED49 /* HYBCommentCell.m in Sources */,
 				E5F666771E8B65960007304B /* RACViewController.m in Sources */,
+				E56615E11EAF2B120004ED49 /* UITableView+HYBCacheHeight.m in Sources */,
 				E5594E851EA7478700EC5D9A /* ICGRulerView.m in Sources */,
 				E5F666AD1E8B68A60007304B /* MRCWebViewModel.m in Sources */,
 				E5F666AA1E8B68A60007304B /* MRCTableViewModel.m in Sources */,
 				E51500161E8A6159001F0DEA /* README.md in Sources */,
 				E5594E861EA7478700EC5D9A /* ICGThumbView.m in Sources */,
 				E58624B51E8CBFB700684D31 /* ViewController.m in Sources */,
+				E598AE941EAF252B0007B968 /* HYBCommentModel.m in Sources */,
 				E5F666B21E8B6B4A0007304B /* MRCRouter.m in Sources */,
 				E5F666D31E8B8E980007304B /* UINavigationItem+MRCBackBarButtonItem.m in Sources */,
 				E58624AB1E8CB80700684D31 /* GPUimageViewModel.m in Sources */,
+				E56615E51EAF2E6E0004ED49 /* CalculationViewModel.m in Sources */,
 				E5F666CD1E8B8E980007304B /* MRCSegmentedControlController.m in Sources */,
+				E56615E21EAF2B120004ED49 /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */,
 				E52543711E83B86300EE244C /* firstViewModel.m in Sources */,
+				E598AE891EAF23150007B968 /* AutomaticCalculationCellHeightViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

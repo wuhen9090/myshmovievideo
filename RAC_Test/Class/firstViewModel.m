@@ -10,6 +10,7 @@
 #import "RACViewModel.h"
 #import "GPUimageViewModel.h"
 #import "VideoEditModel.h"
+#import "CalculationViewModel.h"
 @interface firstViewModel()
 @end
 @implementation firstViewModel
@@ -23,7 +24,7 @@
 }
 
 - (void)setUpSingal {    
-    self.arrayData = @[@"RACTest",@"GPUImage",@"Camera"];
+    self.arrayData = @[@"RACTest",@"GPUImage",@"Camera",@"Automatic calculation"];
     self.title = @"firstView";
     self.dataSource = @[self.arrayData];
     self.shouldPullToRefresh = YES;
@@ -51,7 +52,13 @@
                 [self.services pushViewModel:viewModel animated:YES];
                 break;
             }
-
+            case 3:
+            {
+                NSDictionary *paramGPU = @{@"title":@"Automatic calculation"};
+                CalculationViewModel *viewModel = [[CalculationViewModel alloc] initWithServices:self.services params:paramGPU];
+                [self.services pushViewModel:viewModel animated:YES];
+                break;
+            }
             default:
                 break;
         }
