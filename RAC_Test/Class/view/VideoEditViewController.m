@@ -128,10 +128,10 @@
             [self tapOnVideoLayer:tap];
             self.trimmerView = [[ICGVideoTrimmerView alloc] initWithFrame: self.trimmerViewD.frame asset:self.asset];
             [self.view addSubview:self.trimmerView];
-            [self.trimmerView setThemeColor:[UIColor lightGrayColor]];
+            [self.trimmerView setThemeColor:[UIColor blueColor]];
             [self.trimmerView setShowsRulerView:YES];
             [self.trimmerView setRulerLabelInterval:10];
-            [self.trimmerView setTrackerColor:[UIColor cyanColor]];
+            [self.trimmerView setTrackerColor:[UIColor yellowColor]];
             [self.trimmerView setDelegate:self];
 //            self.stopTime = item.duration.value/item.duration.timescale;
             // important: reset subviews

@@ -42,7 +42,7 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/NetWork/RACNetWorkManager.m"
-                  timestampString = "514286972.921475"
+                  timestampString = "514364666.937859"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "46"
@@ -57,7 +57,7 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/NetWork/RACNetWorkManager.m"
-                  timestampString = "514286972.92278"
+                  timestampString = "514364666.939608"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "48"
@@ -472,7 +472,7 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Class/viewModel/GPUimageViewModel.m"
-                  timestampString = "514286972.97257"
+                  timestampString = "514364666.983795"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "133"
@@ -487,7 +487,7 @@
                   moduleName = "RAC_Test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Class/viewModel/GPUimageViewModel.m"
-                  timestampString = "514286972.973903"
+                  timestampString = "514364666.984987"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "134"
@@ -660,22 +660,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RAC_Test/Class/view/VideoEditViewController.m"
-            timestampString = "514287207.442534"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
-            landmarkName = "-startPlaybackTimeChecker"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -711,13 +695,93 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RAC_Test/Class/view/VideoEditViewController.m"
-            timestampString = "514287207.442534"
+            filePath = "RAC_Test/Gloable/ThirdFile/TrimmerView/ICGVideoTrimmerView.m"
+            timestampString = "514352543.119193"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
-            landmarkName = "-tapOnVideoLayer:"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "-resetSubviews"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RAC_Test/Gloable/ThirdFile/TrimmerView/ICGVideoTrimmerView.m"
+            timestampString = "514353231.070966"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "483"
+            endingLineNumber = "483"
+            landmarkName = "-addFrames"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ICGVideoTrimmerView addFrames]"
+                  moduleName = "RAC_Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Gloable/ThirdFile/TrimmerView/ICGVideoTrimmerView.m"
+                  timestampString = "514364667.018221"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "483"
+                  endingLineNumber = "483"
+                  offsetFromSymbolStart = "3676">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__32-[ICGVideoTrimmerView addFrames]_block_invoke.270"
+                  moduleName = "RAC_Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuxiaoliang/Documents/xcode%20program/RAC_Test/RAC_Test/Gloable/ThirdFile/TrimmerView/ICGVideoTrimmerView.m"
+                  timestampString = "514364667.019346"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "484"
+                  endingLineNumber = "484"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RAC_Test/Gloable/ThirdFile/TrimmerView/ICGVideoTrimmerView.m"
+            timestampString = "514353247.455631"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "485"
+            endingLineNumber = "485"
+            landmarkName = "-addFrames"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RAC_Test/Gloable/ThirdFile/TrimmerView/ICGVideoTrimmerView.m"
+            timestampString = "514353427.818348"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "438"
+            endingLineNumber = "438"
+            landmarkName = "-addFrames"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
